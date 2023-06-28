@@ -2,10 +2,11 @@ package com.tma.training.restaurant.entity;
 
 import com.tma.training.restaurant.common.anotations.Column;
 import com.tma.training.restaurant.common.anotations.CsvFile;
-import lombok.AllArgsConstructor;
-import lombok.Getter;
-import lombok.NoArgsConstructor;
-import lombok.Setter;
+import lombok.*;
+
+import java.util.Arrays;
+import java.util.stream.Collectors;
+import java.util.stream.Stream;
 
 @Getter
 @Setter
@@ -31,11 +32,11 @@ public class Menu extends BaseEntity {
 
     @Override
     public String toCsvString() {
-        return null;
+        return Stream.of(id, name, description, image, price, additionalDetails).map(String::valueOf).collect(Collectors.joining(","));
     }
 
     @Override
     public String toCsvHeader() {
-        return null;
+        return "id,name,description,image,price,additional_details";
     }
 }

@@ -12,7 +12,7 @@ import lombok.Setter;
 @AllArgsConstructor
 @NoArgsConstructor
 @CsvFile(name = "bill.csv")
-public class Bill extends BaseEntity{
+public class Bill extends BaseEntity {
 
     @Column(name = "is_paid")
     private Boolean isPaid;
@@ -26,4 +26,5 @@ public class Bill extends BaseEntity{
     public String toCsvHeader() {
         return null;
     }
+
 }

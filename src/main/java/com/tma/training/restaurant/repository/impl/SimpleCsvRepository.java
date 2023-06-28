@@ -7,22 +7,19 @@ import com.tma.training.restaurant.repository.CrudRepository;
 
 import java.lang.reflect.ParameterizedType;
 import java.lang.reflect.Type;
-import java.util.ArrayList;
-import java.util.List;
-import java.util.Map;
+import java.util.*;
 import java.util.function.Function;
 import java.util.stream.Collectors;
 
-public class CsvSimpleRepository<T extends CsvDataModel> implements CrudRepository<T, String> {
+public class SimpleCsvRepository<T extends CsvDataModel> implements CrudRepository<T, String> {
 
-    private final Class<T> entityClass;
     private final Map<String, T> data;
     private final String csvFileName;
 
-    public CsvSimpleRepository() {
+    public SimpleCsvRepository() {
         Type type = getClass().getGenericSuperclass();
         ParameterizedType paramType = (ParameterizedType) type;
-        entityClass = (Class<T>) paramType.getActualTypeArguments()[0];
+        Class<T> entityClass = (Class<T>) paramType.getActualTypeArguments()[0];
         csvFileName = getCsvFileName(entityClass);
         data = CsvFileUtil.readFile(csvFileName, entityClass).stream().collect(Collectors.toMap(CsvDataModel::getId,  Function.identity()));
     }
@@ -38,14 +35,15 @@ public class CsvSimpleRepository<T extends CsvDataModel> implements CrudReposito
 
     @Override
     public T save(T entity) {
+        entity.setId(UUID.randomUUID().toString());
         data.put(entity.getId(), entity);
         saveAll();
         return entity;
     }
 
     @Override
-    public T findById(String id) {
-        return data.get(id);
+    public Optional<T> findById(String id) {
+        return Optional.ofNullable(data.get(id));
     }
 
     @Override

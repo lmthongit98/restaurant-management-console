@@ -12,7 +12,7 @@ import lombok.Setter;
 @AllArgsConstructor
 @NoArgsConstructor
 @CsvFile(name = "order_item.csv")
-public class OrderItem extends BaseEntity{
+public class OrderItem extends BaseEntity {
 
     @Column(name = "bill_id")
     private Integer billId;

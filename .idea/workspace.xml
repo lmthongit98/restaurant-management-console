@@ -4,28 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="322aa2bd-4467-44be-8d45-4f3962139ead" name="Changes" comment="build structure for restaurant app">
-      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/tma/training/restaurant/App.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/tma/training/restaurant/common/anotations/Column.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/tma/training/restaurant/common/anotations/CsvFile.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/tma/training/restaurant/common/utils/CsvFileUtil.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/tma/training/restaurant/common/utils/DataConvertUtil.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/tma/training/restaurant/entity/BaseEntity.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/tma/training/restaurant/entity/Bill.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/tma/training/restaurant/entity/CsvDataModel.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/tma/training/restaurant/entity/Menu.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/tma/training/restaurant/entity/OrderItem.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/tma/training/restaurant/repository/CrudRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/tma/training/restaurant/repository/MenuRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/tma/training/restaurant/repository/impl/CsvSimpleRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/tma/training/restaurant/repository/impl/MenuRepositoryImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/menu.csv" afterDir="false" />
+    <list default="true" id="322aa2bd-4467-44be-8d45-4f3962139ead" name="Changes" comment="crud for menu">
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/tma/training/restaurant/repository/impl/CsvSimpleRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/tma/training/restaurant/repository/impl/SimpleCsvRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/tma/training/restaurant/repository/impl/MenuRepositoryImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/tma/training/restaurant/repository/impl/MenuRepositoryImpl.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -35,8 +16,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Interface" />
         <option value="Class" />
+        <option value="Interface" />
       </list>
     </option>
   </component>
@@ -61,7 +42,8 @@
     &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
     &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
     &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
-    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;
+    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;
   }
 }</component>
   <component name="RecentsManager">
@@ -101,6 +83,70 @@
       <option name="presentableId" value="Default" />
       <updated>1687962340865</updated>
     </task>
+    <task id="LOCAL-00001" summary="build structure for restaurant app">
+      <created>1687966569032</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1687966569032</updated>
+    </task>
+    <task id="LOCAL-00002" summary="crud for menu">
+      <created>1687977963938</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1687977963938</updated>
+    </task>
+    <task id="LOCAL-00003" summary="crud for menu">
+      <created>1687977997939</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1687977997939</updated>
+    </task>
+    <task id="LOCAL-00004" summary="crud for menu">
+      <created>1687978247777</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1687978247777</updated>
+    </task>
+    <task id="LOCAL-00005" summary="crud for menu">
+      <created>1687978285773</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1687978285773</updated>
+    </task>
+    <task id="LOCAL-00006" summary="crud for menu">
+      <created>1687978295436</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1687978295436</updated>
+    </task>
+    <task id="LOCAL-00007" summary="crud for menu">
+      <created>1687978634379</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1687978634379</updated>
+    </task>
+    <task id="LOCAL-00008" summary="crud for menu">
+      <created>1687978741883</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1687978741883</updated>
+    </task>
+    <task id="LOCAL-00009" summary="crud for menu">
+      <created>1687978776004</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1687978776004</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -116,6 +162,7 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="build structure for restaurant app" />
-    <option name="LAST_COMMIT_MESSAGE" value="build structure for restaurant app" />
+    <MESSAGE value="crud for menu" />
+    <option name="LAST_COMMIT_MESSAGE" value="crud for menu" />
   </component>
 </project>

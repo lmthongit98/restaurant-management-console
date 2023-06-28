@@ -1,11 +1,11 @@
 id,name,description,image,price,additional_details
-1,Shusi,Shusi 2,Sushi.jpg,15.99,Fried Chicken
-2,Pizza,Delicious Pizza,Pizza.jpg,12.99,Pepperoni
-3,Burger,Juicy Burger,Burger.jpg,9.99,Cheeseburger
-4,Pasta,Creamy Pasta,Pasta.jpg,11.99,Carbonara
-5,Steak,Grilled Steak,Steak.jpg,19.99,Medium Rare
-6,Salad,Fresh Salad,Salad.jpg,8.99,Caesar Salad
-7,Ice Cream,Sweet Ice Cream,IceCream.jpg,6.99,Chocolate
-8,Soup,Hot Soup,Soup.jpg,7.99,Tomato Soup
-9,Sandwich,Classic Sandwich,Sandwich.jpg,10.99,Turkey Club
-10,Taco,Tasty Taco,Taco.jpg,9.99,Beef Taco
+24199ba0-d980-47ef-87cb-faf6820a3041,Shusi,Shusi 2,Sushi.jpg,15.99,Fried Chicken
+24199ba0-d980-47ef-87cb-faf6820a3042,Pizza,Delicious Pizza,Pizza.jpg,12.99,Pepperoni
+24199ba0-d980-47ef-87cb-faf6820a3043,Burger,Juicy Burger,Burger.jpg,9.99,Cheeseburger
+24199ba0-d980-47ef-87cb-faf6820a3044,Pasta,Creamy Pasta,Pasta.jpg,11.99,Carbonara
+24199ba0-d980-47ef-87cb-faf6820a3045,Steak,Grilled Steak,Steak.jpg,19.99,Medium Rare
+24199ba0-d980-47ef-87cb-faf6820a3046,Salad,Fresh Salad,Salad.jpg,8.99,Caesar Salad
+24199ba0-d980-47ef-87cb-faf6820a3047,Ice Cream,Sweet Ice Cream,IceCream.jpg,6.99,Chocolate
+24199ba0-d980-47ef-87cb-faf6820a3048,Soup,Hot Soup,Soup.jpg,7.99,Tomato Soup
+24199ba0-d980-47ef-87cb-faf6820a3049,Sandwich,Classic Sandwich,Sandwich.jpg,10.99,Turkey Club
+24199ba0-d980-47ef-87cb-faf6820a30410,Taco,Tasty Taco,Taco.jpg,9.99,Beef Taco

@@ -66,7 +66,7 @@ public class CsvFileUtil {
     }
 
     private static <T> void mapValueToField(T object, String colName, String colValue, Class<T> tClass) throws IllegalAccessException {
-        Class<?> currentClass = tClass.getSuperclass();
+        Class<?> currentClass = tClass;
         while ((currentClass != null)) {
             Field[] fields = currentClass.getDeclaredFields();
             for (Field field : fields) {
