@@ -7,7 +7,7 @@ import com.tma.training.restaurant.view.MenuView;
 
 import java.util.Scanner;
 
-public class App {
+public class RestaurantConsoleApp {
 
     private static final MenuController menuController = MenuControllerImpl.getInstance();
     private static final MenuView menuView = MenuView.getInstance();

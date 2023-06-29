@@ -4,9 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="322aa2bd-4467-44be-8d45-4f3962139ead" name="Changes" comment="crud for menu">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-    </list>
+    <list default="true" id="322aa2bd-4467-44be-8d45-4f3962139ead" name="Changes" comment="change name of app" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -50,12 +48,14 @@
       <recent name="com.tma.training.restaurant.entity" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="com.tma.training.restaurant.repository.impl" />
+      <recent name="com.tma.training.restaurant.service" />
       <recent name="com.tma.training.restaurant.common.anotations" />
     </key>
   </component>
   <component name="RunManager">
-    <configuration name="App" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.tma.training.restaurant.App" />
+    <configuration name="RestaurantConsoleApp" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.tma.training.restaurant.RestaurantConsoleApp" />
       <module name="restaurant-management-console" />
       <extension name="coverage">
         <pattern>
@@ -69,7 +69,7 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.App" />
+        <item itemvalue="Application.RestaurantConsoleApp" />
       </list>
     </recent_temporary>
   </component>
@@ -152,7 +152,35 @@
       <option name="project" value="LOCAL" />
       <updated>1687979779207</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="repository for bill and order item">
+      <created>1688055134600</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1688055134600</updated>
+    </task>
+    <task id="LOCAL-00012" summary="repository for bill and order item">
+      <created>1688055164970</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1688055164970</updated>
+    </task>
+    <task id="LOCAL-00013" summary="repository for bill and order item">
+      <created>1688055194424</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1688055194424</updated>
+    </task>
+    <task id="LOCAL-00014" summary="change name of app">
+      <created>1688055515539</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1688055515539</updated>
+    </task>
+    <option name="localTasksCounter" value="15" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -169,6 +197,8 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="build structure for restaurant app" />
     <MESSAGE value="crud for menu" />
-    <option name="LAST_COMMIT_MESSAGE" value="crud for menu" />
+    <MESSAGE value="repository for bill and order item" />
+    <MESSAGE value="change name of app" />
+    <option name="LAST_COMMIT_MESSAGE" value="change name of app" />
   </component>
 </project>
