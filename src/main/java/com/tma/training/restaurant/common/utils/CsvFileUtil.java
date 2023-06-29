@@ -1,6 +1,7 @@
 package com.tma.training.restaurant.common.utils;
 
 import com.tma.training.restaurant.common.anotations.Column;
+import com.tma.training.restaurant.common.anotations.CsvFile;
 import com.tma.training.restaurant.entity.CsvDataModel;
 
 import java.io.*;
@@ -12,7 +13,8 @@ import java.util.*;
 public class CsvFileUtil {
     private static final String csvDelimiter = ",";
 
-    public static <T> List<T> readFile(String csvFilePath, Class<T> tClass) {
+    public static <T> List<T> readFile(Class<T> tClass) {
+        String csvFilePath = getCsvFileName(tClass);
         List<T> records = new ArrayList<>();
         ClassLoader classLoader = CsvFileUtil.class.getClassLoader();
         try (InputStream inputStream = classLoader.getResourceAsStream(csvFilePath);
@@ -30,7 +32,8 @@ public class CsvFileUtil {
         return records;
     }
 
-    public static <T extends CsvDataModel> void writeFile(String csvFilePath, List<T> data) {
+    public static <T extends CsvDataModel> void writeFile(List<T> data, Class<T> tClass) {
+        String csvFilePath = getCsvFileName(tClass);
         ClassLoader classLoader = CsvFileUtil.class.getClassLoader();
         URL resourceUrl = classLoader.getResource(csvFilePath);
         if (Objects.isNull(resourceUrl)) {
@@ -60,7 +63,8 @@ public class CsvFileUtil {
                 mapValueToField(object, colName, colValue, tClass);
             }
             return object;
-        } catch (InstantiationException | IllegalAccessException | NoSuchMethodException | InvocationTargetException e) {
+        } catch (InstantiationException | IllegalAccessException | NoSuchMethodException |
+                 InvocationTargetException e) {
             throw new RuntimeException(e);
         }
     }
@@ -84,4 +88,14 @@ public class CsvFileUtil {
             currentClass = currentClass.getSuperclass();
         }
     }
+
+    private static String getCsvFileName(Class<?> entityClass) {
+        if (!entityClass.isAnnotationPresent(CsvFile.class)) {
+            throw new RuntimeException("File name can not be found");
+        }
+        CsvFile CsvFile = entityClass.getAnnotation(CsvFile.class);
+        return CsvFile.name();
+    }
+
+
 }

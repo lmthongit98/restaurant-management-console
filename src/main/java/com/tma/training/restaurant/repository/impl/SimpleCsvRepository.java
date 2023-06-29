@@ -14,24 +14,15 @@ import java.util.stream.Collectors;
 public class SimpleCsvRepository<T extends CsvDataModel> implements CrudRepository<T, String> {
 
     private final Map<String, T> data;
-    private final String csvFileName;
+
+    private final Class<T> entityClass;
 
     public SimpleCsvRepository() {
         Type type = getClass().getGenericSuperclass();
         ParameterizedType paramType = (ParameterizedType) type;
-        Class<T> entityClass = (Class<T>) paramType.getActualTypeArguments()[0];
-        csvFileName = getCsvFileName(entityClass);
-        data = CsvFileUtil.readFile(csvFileName, entityClass).stream().collect(Collectors.toMap(CsvDataModel::getId,  Function.identity()));
+        entityClass = (Class<T>) paramType.getActualTypeArguments()[0];
+        data = CsvFileUtil.readFile(entityClass).stream().collect(Collectors.toMap(CsvDataModel::getId,  Function.identity()));
     }
-
-    private String getCsvFileName(Class<T> entityClass) {
-        if (!entityClass.isAnnotationPresent(CsvFile.class)) {
-            throw new RuntimeException("File name can not be found");
-        }
-        CsvFile CsvFile = entityClass.getAnnotation(CsvFile.class);
-        return CsvFile.name();
-    }
-
 
     @Override
     public T save(T entity) {
@@ -66,7 +57,7 @@ public class SimpleCsvRepository<T extends CsvDataModel> implements CrudReposito
     private void saveAll() {
         if (!data.isEmpty()) {
             List<T> records = new ArrayList<>(data.values());
-            CsvFileUtil.writeFile(csvFileName, records);
+            CsvFileUtil.writeFile(records, entityClass);
         }
     }
 
