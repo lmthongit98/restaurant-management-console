@@ -4,7 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="322aa2bd-4467-44be-8d45-4f3962139ead" name="Changes" comment="change name of app" />
+    <list default="true" id="322aa2bd-4467-44be-8d45-4f3962139ead" name="Changes" comment="handle check update menu in an unpaid bill" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -13,8 +13,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Class" />
         <option value="Interface" />
+        <option value="Class" />
       </list>
     </option>
   </component>
@@ -48,8 +48,9 @@
       <recent name="com.tma.training.restaurant.entity" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
-      <recent name="com.tma.training.restaurant.repository.impl" />
+      <recent name="com.tma.training.restaurant.service.impl" />
       <recent name="com.tma.training.restaurant.service" />
+      <recent name="com.tma.training.restaurant.repository.impl" />
       <recent name="com.tma.training.restaurant.common.anotations" />
     </key>
   </component>
@@ -180,7 +181,21 @@
       <option name="project" value="LOCAL" />
       <updated>1688055515539</updated>
     </task>
-    <option name="localTasksCounter" value="15" />
+    <task id="LOCAL-00015" summary="change name of app">
+      <created>1688055728931</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1688055728931</updated>
+    </task>
+    <task id="LOCAL-00016" summary="handle check update menu in an unpaid bill">
+      <created>1688058836188</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1688058836188</updated>
+    </task>
+    <option name="localTasksCounter" value="17" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -199,6 +214,7 @@
     <MESSAGE value="crud for menu" />
     <MESSAGE value="repository for bill and order item" />
     <MESSAGE value="change name of app" />
-    <option name="LAST_COMMIT_MESSAGE" value="change name of app" />
+    <MESSAGE value="handle check update menu in an unpaid bill" />
+    <option name="LAST_COMMIT_MESSAGE" value="handle check update menu in an unpaid bill" />
   </component>
 </project>

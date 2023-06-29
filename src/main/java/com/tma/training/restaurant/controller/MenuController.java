@@ -1,4 +1,4 @@
-package com.tma.training.restaurant.controller.impl;
+package com.tma.training.restaurant.controller;
 
 import com.tma.training.restaurant.controller.BaseController;
 import com.tma.training.restaurant.dto.MenuDto;

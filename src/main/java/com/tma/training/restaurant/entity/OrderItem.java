@@ -15,10 +15,10 @@ import lombok.Setter;
 public class OrderItem extends BaseEntity {
 
     @Column(name = "bill_id")
-    private Integer billId;
+    private String billId;
 
     @Column(name = "menu_id")
-    private Integer menuItemID;
+    private String menuId;
 
     @Column(name = "quantities")
     private Integer quantities;

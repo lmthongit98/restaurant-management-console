@@ -1,11 +1,13 @@
 package com.tma.training.restaurant.service.impl;
 
 import com.tma.training.restaurant.common.exceptions.EntityNotFoundException;
+import com.tma.training.restaurant.common.exceptions.MenuUpdateException;
 import com.tma.training.restaurant.common.mapper.impl.MenuMapper;
 import com.tma.training.restaurant.dto.MenuDto;
 import com.tma.training.restaurant.entity.Menu;
 import com.tma.training.restaurant.repository.MenuRepository;
 import com.tma.training.restaurant.repository.impl.MenuRepositoryImpl;
+import com.tma.training.restaurant.service.BillService;
 import com.tma.training.restaurant.service.MenuService;
 
 import java.util.List;
@@ -17,10 +19,12 @@ public class MenuServiceImpl implements MenuService {
     private final MenuMapper mapper;
 
     private final MenuRepository repository;
+    private final BillService billService;
 
     private MenuServiceImpl() {
         repository = MenuRepositoryImpl.getInstance();
         mapper = MenuMapper.getInstance();
+        billService = BillServiceImpl.getInstance();
     }
 
     public static MenuServiceImpl getInstance() {
@@ -50,6 +54,9 @@ public class MenuServiceImpl implements MenuService {
 
     @Override
     public MenuDto update(MenuDto menuDto) {
+        if (billService.checkMenuInUnpaidBill(menuDto.getId())) {
+            throw new MenuUpdateException("Cannot update a menu in an unpaid bill.");
+        }
         Menu menu = findMenuById(menuDto.getId());
         menu.setDescription(menuDto.getDescription());
         menu.setAdditionalDetails(menuDto.getAdditionalDetails());
@@ -60,7 +67,7 @@ public class MenuServiceImpl implements MenuService {
     }
 
     public Menu findMenuById(String id) {
-        return repository.findById(id).orElseThrow(() -> new EntityNotFoundException("Menu with id " + id + " could not be found!"));
+        return repository.findById(id).orElseThrow(() -> new EntityNotFoundException("Menu", id));
     }
 
     @Override

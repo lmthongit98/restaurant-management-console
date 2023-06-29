@@ -1,6 +1,6 @@
 package com.tma.training.restaurant;
 
-import com.tma.training.restaurant.controller.impl.MenuController;
+import com.tma.training.restaurant.controller.MenuController;
 import com.tma.training.restaurant.controller.impl.MenuControllerImpl;
 import com.tma.training.restaurant.dto.MenuDto;
 import com.tma.training.restaurant.view.MenuView;
