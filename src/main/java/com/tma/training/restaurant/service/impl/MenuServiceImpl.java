@@ -19,16 +19,22 @@ public class MenuServiceImpl implements MenuService {
     private final MenuMapper mapper;
 
     private final MenuRepository repository;
-    private final BillService billService;
+    private BillService billService;
 
     static {
         instance = new MenuServiceImpl();
     }
 
+    private BillService getBillService() {
+        if (billService == null) {
+            billService = BillServiceImpl.getInstance();
+        }
+        return billService;
+    }
+
     private MenuServiceImpl() {
         repository = MenuRepositoryImpl.getInstance();
         mapper = MenuMapper.getInstance();
-        billService = BillServiceImpl.getInstance();
     }
 
     public static MenuServiceImpl getInstance() {
@@ -58,7 +64,7 @@ public class MenuServiceImpl implements MenuService {
 
     @Override
     public MenuDto update(MenuDto menuDto) {
-        if (billService.checkMenuInUnpaidBill(menuDto.getId())) {
+        if (getBillService().checkMenuInUnpaidBill(menuDto.getId())) {
             throw new MenuUpdateException("Cannot update a menu in an unpaid bill.");
         }
         Menu menu = findMenuById(menuDto.getId());
