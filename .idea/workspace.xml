@@ -4,13 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="322aa2bd-4467-44be-8d45-4f3962139ead" name="Changes" comment="handle create bill">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/tma/training/restaurant/service/OrderItemService.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/tma/training/restaurant/service/impl/BillServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/tma/training/restaurant/service/impl/BillServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/tma/training/restaurant/service/impl/MenuServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/tma/training/restaurant/service/impl/MenuServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/tma/training/restaurant/service/impl/OrderItemServiceImpl.java" beforeDir="false" />
-    </list>
+    <list default="true" id="322aa2bd-4467-44be-8d45-4f3962139ead" name="Changes" comment="check bill exist" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -264,7 +258,35 @@
       <option name="project" value="LOCAL" />
       <updated>1688150472028</updated>
     </task>
-    <option name="localTasksCounter" value="26" />
+    <task id="LOCAL-00026" summary="fix circular dependency">
+      <created>1688153310576</created>
+      <option name="number" value="00026" />
+      <option name="presentableId" value="LOCAL-00026" />
+      <option name="project" value="LOCAL" />
+      <updated>1688153310576</updated>
+    </task>
+    <task id="LOCAL-00027" summary="add menu items controller">
+      <created>1688153657193</created>
+      <option name="number" value="00027" />
+      <option name="presentableId" value="LOCAL-00027" />
+      <option name="project" value="LOCAL" />
+      <updated>1688153657193</updated>
+    </task>
+    <task id="LOCAL-00028" summary="check bill exist">
+      <created>1688153884337</created>
+      <option name="number" value="00028" />
+      <option name="presentableId" value="LOCAL-00028" />
+      <option name="project" value="LOCAL" />
+      <updated>1688153884337</updated>
+    </task>
+    <task id="LOCAL-00029" summary="check bill exist">
+      <created>1688154678955</created>
+      <option name="number" value="00029" />
+      <option name="presentableId" value="LOCAL-00029" />
+      <option name="project" value="LOCAL" />
+      <updated>1688154678955</updated>
+    </task>
+    <option name="localTasksCounter" value="30" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -288,6 +310,14 @@
     <MESSAGE value="init static singleton service" />
     <MESSAGE value="update constant" />
     <MESSAGE value="handle create bill" />
-    <option name="LAST_COMMIT_MESSAGE" value="handle create bill" />
+    <MESSAGE value="fix circular dependency" />
+    <MESSAGE value="add menu items controller" />
+    <MESSAGE value="check bill exist" />
+    <option name="LAST_COMMIT_MESSAGE" value="check bill exist" />
+  </component>
+  <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/restaurant_management_console$RestaurantConsoleApp.ic" NAME="RestaurantConsoleApp Coverage Results" MODIFIED="1688153952197" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>com.tma.training.restaurant.*</FILTER>
+    </SUITE>
   </component>
 </project>

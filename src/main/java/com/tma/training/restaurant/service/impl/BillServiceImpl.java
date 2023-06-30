@@ -65,7 +65,10 @@ public class BillServiceImpl implements BillService {
 
     @Override
     public void addMenuItems(String billId, List<CustomerOrder> customerOrders) {
-        Bill bill = findBillById(billId); // will throw exception if bill is not found
+        Bill bill = findBillById(billId);
+        if (Boolean.TRUE.equals(bill.getIsPaid())) {
+            throw new IllegalStateException("Could not add menu items in a paid bill");
+        }
         List<OrderItem> updatedOrderItems = new ArrayList<>();
         List<OrderItem> orderItems = orderItemRepository.findAllByBillId(billId);
         Map<String, OrderItem> menuIdOrderItemMap = orderItems.stream().collect(Collectors.toMap(OrderItem::getMenuId, Function.identity()));

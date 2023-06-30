@@ -13,7 +13,7 @@ import java.util.stream.Collectors;
 
 public class SimpleCsvRepository<T extends CsvDataModel> implements CrudRepository<T, String> {
 
-    private final Map<String, T> data;
+    protected final Map<String, T> data;
 
     private final Class<T> entityClass;
 

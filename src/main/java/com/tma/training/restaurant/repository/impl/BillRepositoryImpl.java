@@ -22,4 +22,8 @@ public class BillRepositoryImpl extends SimpleCsvRepository<Bill> implements Bil
     public List<Bill> findByIsPaidBill(boolean isPaid) {
         return findAll().stream().filter(bill -> bill.getIsPaid() == isPaid).toList();
     }
+
+    public boolean isBillExist(String billId) {
+        return data.containsKey(billId);
+    }
 }
