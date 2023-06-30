@@ -26,21 +26,24 @@ public class SimpleCsvRepository<T extends CsvDataModel> implements CrudReposito
 
     @Override
     public T save(T entity) {
-        entity.setId(UUID.randomUUID().toString());
+        if (Objects.isNull(entity.getId())) {
+            entity.setId(UUID.randomUUID().toString());
+        }
         data.put(entity.getId(), entity);
         saveAll();
         return entity;
     }
 
     @Override
-    public Optional<T> findById(String id) {
-        return Optional.ofNullable(data.get(id));
+    public void saveAll(List<T> entities) {
+        for (T entity : entities) {
+            save(entity);
+        }
     }
 
     @Override
-    public void update(T entity) {
-        data.put(entity.getId(), entity);
-        saveAll();
+    public Optional<T> findById(String id) {
+        return Optional.ofNullable(data.get(id));
     }
 
     @Override

@@ -1,7 +1,17 @@
 package com.tma.training.restaurant.entity;
 
 import com.tma.training.restaurant.common.anotations.Column;
+import lombok.AllArgsConstructor;
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+import lombok.Setter;
+import lombok.experimental.SuperBuilder;
 
+@Getter
+@Setter
+@SuperBuilder
+@NoArgsConstructor
+@AllArgsConstructor
 public abstract class BaseEntity implements CsvDataModel {
 
     @Column(name = "id")

@@ -2,15 +2,16 @@ package com.tma.training.restaurant.service.impl;
 
 import com.tma.training.restaurant.common.exceptions.EntityNotFoundException;
 import com.tma.training.restaurant.common.mapper.impl.MenuMapper;
-import com.tma.training.restaurant.dto.BillDto;
-import com.tma.training.restaurant.dto.MenuDto;
-import com.tma.training.restaurant.dto.OrderItemDto;
+import com.tma.training.restaurant.common.utils.DateUtil;
+import com.tma.training.restaurant.dto.request.BillRequestDto;
+import com.tma.training.restaurant.dto.response.BillResponseDto;
 import com.tma.training.restaurant.entity.Bill;
 import com.tma.training.restaurant.entity.OrderItem;
 import com.tma.training.restaurant.repository.impl.BillRepositoryImpl;
 import com.tma.training.restaurant.service.BillService;
 import com.tma.training.restaurant.service.OrderItemService;
 
+import java.util.Date;
 import java.util.List;
 
 public class BillServiceImpl implements BillService {
@@ -39,23 +40,24 @@ public class BillServiceImpl implements BillService {
     }
 
     @Override
-    public List<BillDto> findAll() {
+    public List<BillResponseDto> findAll() {
         return null;
     }
 
     @Override
-    public BillDto findById(String id) {
+    public BillResponseDto findById(String id) {
         return null;
     }
 
     @Override
-    public BillDto create(BillDto dto) {
-        return null;
-    }
-
-    @Override
-    public BillDto update(BillDto dto) {
-        return null;
+    public BillResponseDto create(BillRequestDto billRequestDto) {
+        Bill bill = Bill.builder()
+                .isPaid(false)
+                .createdDate(DateUtil.getCurrentDate())
+                .build();
+        Bill savedBill = repository.save(bill);
+        orderItemService.addMenuItems(savedBill.getId(), billRequestDto.getCustomerOrders());
+        return new BillResponseDto();
     }
 
     @Override
@@ -64,6 +66,7 @@ public class BillServiceImpl implements BillService {
         repository.delete(bill);
     }
 
+    @Override
     public Bill findBillById(String id) {
         return repository.findById(id).orElseThrow(() -> new EntityNotFoundException("Bill", id));
     }

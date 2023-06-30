@@ -7,6 +7,7 @@ import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
+import lombok.experimental.SuperBuilder;
 
 import java.util.stream.Collectors;
 import java.util.stream.Stream;
@@ -15,6 +16,7 @@ import java.util.stream.Stream;
 @Setter
 @AllArgsConstructor
 @NoArgsConstructor
+@SuperBuilder
 @CsvFile(name = "bill.csv")
 public class Bill extends BaseEntity {
 

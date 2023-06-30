@@ -2,10 +2,12 @@ package com.tma.training.restaurant.service;
 
 import java.util.List;
 
-public interface BaseService<T> {
-    List<T> findAll();
-    T findById(String id);
-    T create(T dto);
-    T update(T dto);
+public interface BaseService<Request, Response> {
+    List<Response> findAll();
+
+    Response findById(String id);
+
+    Response create(Request request);
+
     void delete(String id);
 }

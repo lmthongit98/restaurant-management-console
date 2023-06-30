@@ -1,19 +1,14 @@
 package com.tma.training.restaurant.controller;
 
-import com.tma.training.restaurant.dto.MenuDto;
-
 import java.util.List;
 
-public interface BaseController<T> {
+public interface BaseController<Request, Response> {
 
-    List<T> findAll();
+    List<Response> findAll();
 
-    T findById(String id);
+    Response findById(String id);
 
-    T create(MenuDto menuDto);
-
-    T update(MenuDto menuDto);
-
+    Response create(Request request);
 
     void delete(String id);
 }
