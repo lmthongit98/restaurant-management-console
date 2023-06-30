@@ -1,1 +1,1 @@
-id,bill_id,menu_id,quantities,unit_price
+id,bill_id,menu_id,quantities,unit_price,created_date,updated_date

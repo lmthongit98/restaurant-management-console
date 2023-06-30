@@ -1,4 +1,4 @@
-id,name,description,image,price,additional_details
+id,name,description,image,price,additional_details,created_date,updated_date
 24199ba0-d980-47ef-87cb-faf6820a3041,Shusi,Shusi 2,Sushi.jpg,15.99,Fried Chicken
 24199ba0-d980-47ef-87cb-faf6820a3042,Pizza,Delicious Pizza,Pizza.jpg,12.99,Pepperoni
 24199ba0-d980-47ef-87cb-faf6820a3043,Burger,Juicy Burger,Burger.jpg,9.99,Cheeseburger

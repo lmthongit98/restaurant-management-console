@@ -60,7 +60,8 @@ public class BillServiceImpl implements BillService {
 
     @Override
     public void delete(String id) {
-
+        Bill bill = findBillById(id);
+        repository.delete(bill);
     }
 
     public Bill findBillById(String id) {

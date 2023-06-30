@@ -4,8 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="322aa2bd-4467-44be-8d45-4f3962139ead" name="Changes" comment="update bill.csv and order_item.csv">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    <list default="true" id="322aa2bd-4467-44be-8d45-4f3962139ead" name="Changes" comment="init static singleton service">
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/tma/training/restaurant/dto/BillDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/tma/training/restaurant/dto/BillDto.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/tma/training/restaurant/service/impl/BillServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/tma/training/restaurant/service/impl/BillServiceImpl.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -232,7 +233,14 @@
       <option name="project" value="LOCAL" />
       <updated>1688060787728</updated>
     </task>
-    <option name="localTasksCounter" value="22" />
+    <task id="LOCAL-00022" summary="init static singleton service">
+      <created>1688145537211</created>
+      <option name="number" value="00022" />
+      <option name="presentableId" value="LOCAL-00022" />
+      <option name="project" value="LOCAL" />
+      <updated>1688145537211</updated>
+    </task>
+    <option name="localTasksCounter" value="23" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -253,6 +261,7 @@
     <MESSAGE value="change name of app" />
     <MESSAGE value="handle check update menu in an unpaid bill" />
     <MESSAGE value="update bill.csv and order_item.csv" />
-    <option name="LAST_COMMIT_MESSAGE" value="update bill.csv and order_item.csv" />
+    <MESSAGE value="init static singleton service" />
+    <option name="LAST_COMMIT_MESSAGE" value="init static singleton service" />
   </component>
 </project>
