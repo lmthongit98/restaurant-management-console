@@ -21,6 +21,10 @@ public class MenuServiceImpl implements MenuService {
     private final MenuRepository repository;
     private final BillService billService;
 
+    static {
+        instance = new MenuServiceImpl();
+    }
+
     private MenuServiceImpl() {
         repository = MenuRepositoryImpl.getInstance();
         mapper = MenuMapper.getInstance();

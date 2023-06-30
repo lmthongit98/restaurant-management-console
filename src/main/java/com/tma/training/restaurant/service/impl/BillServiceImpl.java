@@ -21,6 +21,10 @@ public class BillServiceImpl implements BillService {
     private final BillRepositoryImpl repository;
     private final OrderItemService orderItemService;
 
+    static {
+        instance = new BillServiceImpl();
+    }
+
     private BillServiceImpl() {
         repository = BillRepositoryImpl.getInstance();
         orderItemService = OrderItemServiceImpl.getInstance();

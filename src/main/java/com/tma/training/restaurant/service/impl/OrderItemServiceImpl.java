@@ -16,6 +16,10 @@ public class OrderItemServiceImpl implements OrderItemService {
 
     private final OrderItemRepository repository;
 
+    static {
+        instance = new OrderItemServiceImpl();
+    }
+
     private OrderItemServiceImpl() {
         repository = OrderItemRepositoryImpl.getInstance();
         mapper = MenuMapper.getInstance();
