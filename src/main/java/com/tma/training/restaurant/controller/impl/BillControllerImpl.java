@@ -2,6 +2,7 @@ package com.tma.training.restaurant.controller.impl;
 
 import com.tma.training.restaurant.controller.BillController;
 import com.tma.training.restaurant.dto.request.BillRequestDto;
+import com.tma.training.restaurant.dto.request.CustomerOrder;
 import com.tma.training.restaurant.dto.response.BillResponseDto;
 import com.tma.training.restaurant.service.BillService;
 import com.tma.training.restaurant.service.impl.BillServiceImpl;
@@ -45,5 +46,10 @@ public class BillControllerImpl implements BillController {
     @Override
     public void delete(String id) {
 
+    }
+
+    @Override
+    public void addMenuItems(String billId, List<CustomerOrder> customerOrders) {
+        service.addMenuItems(billId, customerOrders);
     }
 }
