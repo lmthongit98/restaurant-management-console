@@ -3,6 +3,7 @@ package com.tma.training.restaurant.repository.impl;
 import com.tma.training.restaurant.common.anotations.CsvFile;
 import com.tma.training.restaurant.common.utils.CsvFileUtil;
 import com.tma.training.restaurant.entity.CsvDataModel;
+import com.tma.training.restaurant.entity.OrderItem;
 import com.tma.training.restaurant.repository.CrudRepository;
 
 import java.lang.reflect.ParameterizedType;
@@ -50,6 +51,13 @@ public class SimpleCsvRepository<T extends CsvDataModel> implements CrudReposito
     public void delete(T entity) {
         data.remove(entity.getId());
         saveAll();
+    }
+
+    @Override
+    public void deleteAll(List<T> entities) {
+        for (T entity : entities) {
+            delete(entity);
+        }
     }
 
     @Override

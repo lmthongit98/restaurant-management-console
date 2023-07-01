@@ -52,4 +52,9 @@ public class BillControllerImpl implements BillController {
     public void addMenuItems(String billId, List<CustomerOrder> customerOrders) {
         service.addMenuItems(billId, customerOrders);
     }
+
+    @Override
+    public void removeMenuItems(String billId, List<CustomerOrder> customerOrders) {
+        service.removeMenuItems(billId, customerOrders);
+    }
 }

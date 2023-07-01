@@ -8,4 +8,5 @@ import java.util.List;
 
 public interface BillController extends BaseController<BillRequestDto, BillResponseDto> {
     void addMenuItems(String billId, List<CustomerOrder> customerOrders);
+    void removeMenuItems(String billId, List<CustomerOrder> customerOrders);
 }

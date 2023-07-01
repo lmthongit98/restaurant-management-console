@@ -8,5 +8,6 @@ public interface CrudRepository<T, ID> {
     void saveAll(List<T> entities);
     Optional<T> findById(ID id);
     void delete(T entity);
+    void deleteAll(List<T> entities);
     List<T> findAll();
 }

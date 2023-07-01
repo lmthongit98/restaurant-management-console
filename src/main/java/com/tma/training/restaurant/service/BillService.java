@@ -12,4 +12,6 @@ public interface BillService extends BaseService<BillRequestDto, BillResponseDto
 
     Bill findBillById(String billId);
     void addMenuItems(String billId, List<CustomerOrder> customerOrders);
+
+    void removeMenuItems(String billId, List<CustomerOrder> customerOrders);
 }

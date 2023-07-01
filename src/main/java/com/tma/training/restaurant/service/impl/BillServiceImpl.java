@@ -92,6 +92,35 @@ public class BillServiceImpl implements BillService {
     }
 
     @Override
+    public void removeMenuItems(String billId, List<CustomerOrder> customerOrders) {
+        Bill bill = findBillById(billId);
+        if (Boolean.TRUE.equals(bill.getIsPaid())) {
+            throw new IllegalStateException("Could not remove menu items in a paid bill");
+        }
+        List<OrderItem> orderItems = orderItemRepository.findAllByBillId(billId);
+        List<OrderItem> orderItemToBeUpdated = new ArrayList<>();
+        List<OrderItem> orderItemToBeRemoved = new ArrayList<>();
+        Map<String, OrderItem> menuIdOrderItemMap = orderItems.stream().collect(Collectors.toMap(OrderItem::getMenuId, Function.identity()));
+        for (CustomerOrder customerOrder : customerOrders) {
+            OrderItem orderItem = menuIdOrderItemMap.get(customerOrder.getMenuId());
+            if (orderItem == null) {
+                throw new EntityNotFoundException("Order item", customerOrder.getMenuId());
+            }
+            int updatedQuantity = orderItem.getQuantities() - customerOrder.getQuantity();
+            if (updatedQuantity > 0) {
+                customerOrder.setQuantity(updatedQuantity);
+                orderItemToBeUpdated.add(orderItem);
+            } else if (updatedQuantity == 0) {
+                orderItemToBeRemoved.add(orderItem);
+            } else {
+                throw new IllegalStateException("Quantity could must not less than 0");
+            }
+        }
+        orderItemRepository.saveAll(orderItemToBeUpdated);
+        orderItemRepository.deleteAll(orderItemToBeRemoved);
+    }
+
+    @Override
     public void delete(String id) {
         Bill bill = findBillById(id);
         billRepository.delete(bill);
