@@ -46,7 +46,7 @@ public class MenuServiceImpl implements MenuService {
 
     @Override
     public List<MenuDto> findAll() {
-        List<Menu> menus = repository.findAll();
+        List<Menu> menus = repository.findByDeleted(false);
         return menus.stream().map(mapper::mapToDto).collect(Collectors.toList());
     }
 
@@ -77,13 +77,14 @@ public class MenuServiceImpl implements MenuService {
     }
 
     public Menu findMenuById(String id) {
-        return repository.findById(id).orElseThrow(() -> new EntityNotFoundException("Menu", id));
+        return repository.findByIdAndDeleted(id, false).orElseThrow(() -> new EntityNotFoundException("Menu", id));
     }
 
     @Override
     public void delete(String id) {
         Menu menu = findMenuById(id);
-        repository.delete(menu);
+        menu.setDeleted(true);
+        repository.save(menu);
     }
 
 }

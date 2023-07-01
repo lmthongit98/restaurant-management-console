@@ -33,9 +33,12 @@ public class Menu extends BaseEntity {
     @Column(name = "additional_details")
     private String additionalDetails;
 
+    @Column(name = "deleted")
+    private Boolean deleted = Boolean.FALSE;
+
     @Override
     public String toCsvString() {
-        return Stream.of(id, name, description, image, price, additionalDetails, createdDate, updatedDate).map(String::valueOf).collect(Collectors.joining(","));
+        return Stream.of(id, name, description, image, price, additionalDetails, deleted, createdDate, updatedDate).map(String::valueOf).collect(Collectors.joining(","));
     }
 
     @Override
