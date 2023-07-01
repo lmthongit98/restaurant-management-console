@@ -1,9 +1,8 @@
 package com.tma.training.restaurant.repository.impl;
 
-import com.tma.training.restaurant.common.anotations.CsvFile;
 import com.tma.training.restaurant.common.utils.CsvFileUtil;
+import com.tma.training.restaurant.common.utils.DateUtil;
 import com.tma.training.restaurant.entity.CsvDataModel;
-import com.tma.training.restaurant.entity.OrderItem;
 import com.tma.training.restaurant.repository.CrudRepository;
 
 import java.lang.reflect.ParameterizedType;
@@ -29,7 +28,9 @@ public class SimpleCsvRepository<T extends CsvDataModel> implements CrudReposito
     public T save(T entity) {
         if (Objects.isNull(entity.getId())) {
             entity.setId(UUID.randomUUID().toString());
+            entity.setCreatedDate(DateUtil.getCurrentDate());
         }
+        entity.setUpdatedDate(DateUtil.getCurrentDate());
         data.put(entity.getId(), entity);
         saveAll();
         return entity;

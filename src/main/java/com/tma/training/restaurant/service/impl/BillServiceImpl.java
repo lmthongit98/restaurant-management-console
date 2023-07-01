@@ -53,10 +53,7 @@ public class BillServiceImpl implements BillService {
 
     @Override
     public BillResponseDto create(BillRequestDto billRequestDto) {
-        Bill bill = Bill.builder()
-                .isPaid(false)
-                .createdDate(DateUtil.getCurrentDate())
-                .build();
+        Bill bill = new Bill();
         Bill savedBill = billRepository.save(bill);
         addMenuItems(savedBill.getId(), billRequestDto.getCustomerOrders());
         return new BillResponseDto();
@@ -108,7 +105,7 @@ public class BillServiceImpl implements BillService {
             }
             int updatedQuantity = orderItem.getQuantities() - customerOrder.getQuantity();
             if (updatedQuantity > 0) {
-                customerOrder.setQuantity(updatedQuantity);
+                orderItem.setQuantities(updatedQuantity);
                 orderItemToBeUpdated.add(orderItem);
             } else if (updatedQuantity == 0) {
                 orderItemToBeRemoved.add(orderItem);

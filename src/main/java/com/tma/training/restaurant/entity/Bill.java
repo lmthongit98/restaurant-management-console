@@ -21,7 +21,7 @@ import java.util.stream.Stream;
 public class Bill extends BaseEntity {
 
     @Column(name = "is_paid")
-    private Boolean isPaid;
+    private Boolean isPaid = Boolean.FALSE;
 
     @Override
     public String toCsvString() {
