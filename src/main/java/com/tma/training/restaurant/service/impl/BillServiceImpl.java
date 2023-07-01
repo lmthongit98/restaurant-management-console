@@ -22,22 +22,16 @@ import java.util.stream.Collectors;
 
 public class BillServiceImpl implements BillService {
 
-    private static BillServiceImpl instance;
+    private static final BillServiceImpl instance = new BillServiceImpl();
 
-    private final BillRepositoryImpl billRepository;
-    private final OrderItemRepository orderItemRepository;
-    private final MenuService menuService;
+    private final BillRepositoryImpl billRepository = BillRepositoryImpl.getInstance();
+    private final OrderItemRepository orderItemRepository = OrderItemRepositoryImpl.getInstance();
+    private final MenuService menuService = MenuServiceImpl.getInstance();
 
     private BillServiceImpl() {
-        billRepository = BillRepositoryImpl.getInstance();
-        orderItemRepository = OrderItemRepositoryImpl.getInstance();
-        menuService = MenuServiceImpl.getInstance();
     }
 
     public static BillServiceImpl getInstance() {
-        if (instance == null) {
-            instance = new BillServiceImpl();
-        }
         return instance;
     }
 
@@ -67,8 +61,8 @@ public class BillServiceImpl implements BillService {
             throw new IllegalStateException("Could not add menu items in a paid bill");
         }
         List<OrderItem> updatedOrderItems = new ArrayList<>();
-        List<OrderItem> orderItems = orderItemRepository.findAllByBillId(billId);
-        Map<String, OrderItem> menuIdOrderItemMap = orderItems.stream().collect(Collectors.toMap(OrderItem::getMenuId, Function.identity()));
+        List<OrderItem> orderItems = getOrderItems(billId);
+        Map<String, OrderItem> menuIdOrderItemMap = getMenuIdOrderItemMap(orderItems);
         for (CustomerOrder customerOrder : customerOrders) {
             String menuId = customerOrder.getMenuId();
             OrderItem orderItem = menuIdOrderItemMap.get(menuId);
@@ -88,16 +82,20 @@ public class BillServiceImpl implements BillService {
         orderItemRepository.saveAll(updatedOrderItems);
     }
 
+    private Map<String, OrderItem> getMenuIdOrderItemMap(List<OrderItem> orderItems) {
+        return orderItems.stream().collect(Collectors.toMap(OrderItem::getMenuId, Function.identity()));
+    }
+
     @Override
     public void removeMenuItems(String billId, List<CustomerOrder> customerOrders) {
         Bill bill = findBillById(billId);
         if (Boolean.TRUE.equals(bill.getIsPaid())) {
             throw new IllegalStateException("Could not remove menu items in a paid bill");
         }
-        List<OrderItem> orderItems = orderItemRepository.findAllByBillId(billId);
+        List<OrderItem> orderItems = getOrderItems(billId);
         List<OrderItem> orderItemToBeUpdated = new ArrayList<>();
         List<OrderItem> orderItemToBeRemoved = new ArrayList<>();
-        Map<String, OrderItem> menuIdOrderItemMap = orderItems.stream().collect(Collectors.toMap(OrderItem::getMenuId, Function.identity()));
+        Map<String, OrderItem> menuIdOrderItemMap = getMenuIdOrderItemMap(orderItems);
         for (CustomerOrder customerOrder : customerOrders) {
             OrderItem orderItem = menuIdOrderItemMap.get(customerOrder.getMenuId());
             if (orderItem == null) {
@@ -110,7 +108,7 @@ public class BillServiceImpl implements BillService {
             } else if (updatedQuantity == 0) {
                 orderItemToBeRemoved.add(orderItem);
             } else {
-                throw new IllegalStateException("Quantity could must not less than 0");
+                throw new IllegalStateException("Quantity should not be less than 0");
             }
         }
         orderItemRepository.saveAll(orderItemToBeUpdated);
@@ -120,7 +118,13 @@ public class BillServiceImpl implements BillService {
     @Override
     public void delete(String id) {
         Bill bill = findBillById(id);
+        List<OrderItem> orderItems = getOrderItems(id);
+        orderItemRepository.deleteAll(orderItems);
         billRepository.delete(bill);
+    }
+
+    private List<OrderItem> getOrderItems(String id) {
+        return orderItemRepository.findAllByBillId(id);
     }
 
     @Override
@@ -133,7 +137,7 @@ public class BillServiceImpl implements BillService {
     public boolean checkMenuInUnpaidBill(String menuId) {
         List<Bill> unpaidBills = billRepository.findByIsPaidBill(false);
         for (Bill bill : unpaidBills) {
-            List<OrderItem> orderItemsOfBill = orderItemRepository.findAllByBillId(bill.getId());
+            List<OrderItem> orderItemsOfBill = getOrderItems(bill.getId());
             if (orderItemsOfBill.stream().anyMatch(orderItemDto -> menuId.equals(orderItemDto.getMenuId()))) {
                 return true;
             }

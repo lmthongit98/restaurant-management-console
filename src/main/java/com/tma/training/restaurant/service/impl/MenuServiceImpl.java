@@ -7,7 +7,6 @@ import com.tma.training.restaurant.dto.MenuDto;
 import com.tma.training.restaurant.entity.Menu;
 import com.tma.training.restaurant.repository.MenuRepository;
 import com.tma.training.restaurant.repository.impl.MenuRepositoryImpl;
-import com.tma.training.restaurant.service.BillService;
 import com.tma.training.restaurant.service.MenuService;
 
 import java.util.List;
@@ -15,32 +14,14 @@ import java.util.stream.Collectors;
 
 public class MenuServiceImpl implements MenuService {
 
-    private static MenuServiceImpl instance;
-    private final MenuMapper mapper;
-
-    private final MenuRepository repository;
-    private BillService billService;
-
-    static {
-        instance = new MenuServiceImpl();
-    }
-
-    private BillService getBillService() {
-        if (billService == null) {
-            billService = BillServiceImpl.getInstance();
-        }
-        return billService;
-    }
+    private static final MenuServiceImpl instance = new MenuServiceImpl();
+    private final MenuMapper mapper = MenuMapper.getInstance();
+    private final MenuRepository repository = MenuRepositoryImpl.getInstance();
 
     private MenuServiceImpl() {
-        repository = MenuRepositoryImpl.getInstance();
-        mapper = MenuMapper.getInstance();
     }
 
     public static MenuServiceImpl getInstance() {
-        if (instance == null) {
-            instance = new MenuServiceImpl();
-        }
         return instance;
     }
 
@@ -64,7 +45,7 @@ public class MenuServiceImpl implements MenuService {
 
     @Override
     public MenuDto update(MenuDto menuDto) {
-        if (getBillService().checkMenuInUnpaidBill(menuDto.getId())) {
+        if (BillServiceImpl.getInstance().checkMenuInUnpaidBill(menuDto.getId())) {
             throw new MenuUpdateException("Cannot update a menu in an unpaid bill.");
         }
         Menu menu = findMenuById(menuDto.getId());

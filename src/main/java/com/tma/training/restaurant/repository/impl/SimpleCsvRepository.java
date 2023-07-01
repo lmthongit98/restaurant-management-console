@@ -21,7 +21,7 @@ public class SimpleCsvRepository<T extends CsvDataModel> implements CrudReposito
         Type type = getClass().getGenericSuperclass();
         ParameterizedType paramType = (ParameterizedType) type;
         entityClass = (Class<T>) paramType.getActualTypeArguments()[0];
-        data = CsvFileUtil.readFile(entityClass).stream().collect(Collectors.toMap(CsvDataModel::getId,  Function.identity()));
+        data = CsvFileUtil.readFile(entityClass).stream().collect(Collectors.toMap(CsvDataModel::getId, Function.identity(), (existingValue, newValue) -> newValue, LinkedHashMap::new));
     }
 
     @Override
