@@ -2,13 +2,15 @@ package com.tma.training.restaurant.dto;
 
 import lombok.*;
 
+import java.util.UUID;
+
 @Getter
 @Setter
 @AllArgsConstructor
 @NoArgsConstructor
 @Builder
 public class MenuDto {
-    private String id;
+    private UUID id;
     private String name;
     private String description;
     private String image;

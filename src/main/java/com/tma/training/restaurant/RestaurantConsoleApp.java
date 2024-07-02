@@ -6,6 +6,7 @@ import com.tma.training.restaurant.dto.MenuDto;
 import com.tma.training.restaurant.view.MenuView;
 
 import java.util.Scanner;
+import java.util.UUID;
 
 public class RestaurantConsoleApp {
 
@@ -13,6 +14,7 @@ public class RestaurantConsoleApp {
     private static final MenuView menuView = MenuView.getInstance();
 
     public static void main(String[] args) {
+        System.out.println(UUID.randomUUID().toString());
         Scanner scanner = new Scanner(System.in);
         boolean isRunning = true;
         while (isRunning) {

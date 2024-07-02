@@ -45,16 +45,17 @@ public class MenuServiceImpl implements MenuService {
 
     @Override
     public MenuDto update(MenuDto menuDto) {
-        if (BillServiceImpl.getInstance().checkMenuInUnpaidBill(menuDto.getId())) {
-            throw new MenuUpdateException("Cannot update a menu in an unpaid bill.");
-        }
-        Menu menu = findMenuById(menuDto.getId());
-        menu.setDescription(menuDto.getDescription());
-        menu.setAdditionalDetails(menuDto.getAdditionalDetails());
-        menu.setPrice(menuDto.getPrice());
-        menu.setImage(menuDto.getImage());
-        menu.setName(menuDto.getName());
-        return mapper.mapToDto(repository.save(menu));
+//        if (BillServiceImpl.getInstance().checkMenuInUnpaidBill(menuDto.getId())) {
+//            throw new MenuUpdateException("Cannot update a menu in an unpaid bill.");
+//        }
+//        Menu menu = findMenuById(menuDto.getId());
+//        menu.setDescription(menuDto.getDescription());
+//        menu.setAdditionalDetails(menuDto.getAdditionalDetails());
+//        menu.setPrice(menuDto.getPrice());
+//        menu.setImage(menuDto.getImage());
+//        menu.setName(menuDto.getName());
+//        return mapper.mapToDto(repository.save(menu));
+        return null;
     }
 
     public Menu findMenuById(String id) {
