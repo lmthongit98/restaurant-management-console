@@ -1,4 +1,4 @@
-package com.tma.training.restaurant.entity;
+package com.tma.training.restaurant.infra.csv.entity;
 
 import com.tma.training.restaurant.common.anotations.Column;
 import lombok.AllArgsConstructor;

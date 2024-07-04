@@ -1,4 +1,4 @@
-package com.tma.training.restaurant.entity;
+package com.tma.training.restaurant.infra.csv.entity;
 
 public interface CsvDataModel {
     String getId();

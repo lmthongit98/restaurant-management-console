@@ -2,7 +2,7 @@ package com.tma.training.restaurant.common.utils;
 
 import com.tma.training.restaurant.common.anotations.Column;
 import com.tma.training.restaurant.common.anotations.CsvFile;
-import com.tma.training.restaurant.entity.CsvDataModel;
+import com.tma.training.restaurant.infra.csv.entity.CsvDataModel;
 
 import java.io.*;
 import java.lang.reflect.Field;

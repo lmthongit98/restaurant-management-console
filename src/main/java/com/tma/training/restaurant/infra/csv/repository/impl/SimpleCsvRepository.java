@@ -1,9 +1,9 @@
-package com.tma.training.restaurant.repository.impl;
+package com.tma.training.restaurant.infra.csv.repository.impl;
 
 import com.tma.training.restaurant.common.utils.CsvFileUtil;
 import com.tma.training.restaurant.common.utils.DateUtil;
-import com.tma.training.restaurant.entity.CsvDataModel;
-import com.tma.training.restaurant.repository.CrudRepository;
+import com.tma.training.restaurant.infra.csv.entity.CsvDataModel;
+import com.tma.training.restaurant.infra.csv.repository.CrudRepository;
 
 import java.lang.reflect.ParameterizedType;
 import java.lang.reflect.Type;

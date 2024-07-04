@@ -2,7 +2,7 @@ package com.tma.training.restaurant.common.mapper.impl;
 
 import com.tma.training.restaurant.common.mapper.Mapper;
 import com.tma.training.restaurant.dto.MenuDto;
-import com.tma.training.restaurant.entity.Menu;
+import com.tma.training.restaurant.infra.csv.entity.Menu;
 import org.modelmapper.ModelMapper;
 
 public class MenuMapper implements Mapper<MenuDto, Menu> {

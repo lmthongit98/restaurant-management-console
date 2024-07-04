@@ -1,21 +1,22 @@
-package com.tma.training.restaurant.repository.impl;
+package com.tma.training.restaurant.infra.csv.repository.impl;
 
-import com.tma.training.restaurant.entity.Menu;
-import com.tma.training.restaurant.repository.MenuRepository;
+import com.tma.training.restaurant.infra.csv.entity.Menu;
+import com.tma.training.restaurant.infra.csv.repository.CsvMenuRepository;
 
 import java.util.List;
 import java.util.Optional;
 import java.util.stream.Collectors;
 
-public class MenuRepositoryImpl extends SimpleCsvRepository<Menu> implements MenuRepository {
-    private static MenuRepositoryImpl instance;
+public class CsvMenuRepositoryImpl extends SimpleCsvRepository<Menu> implements CsvMenuRepository {
 
-    private MenuRepositoryImpl() {
+    private static CsvMenuRepositoryImpl instance;
+
+    private CsvMenuRepositoryImpl() {
     }
 
-    public static MenuRepositoryImpl getInstance() {
+    public static CsvMenuRepositoryImpl getInstance() {
         if (instance == null) {
-            instance = new MenuRepositoryImpl();
+            instance = new CsvMenuRepositoryImpl();
         }
         return instance;
     }
