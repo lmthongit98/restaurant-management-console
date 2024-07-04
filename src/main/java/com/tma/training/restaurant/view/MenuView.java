@@ -1,6 +1,6 @@
 package com.tma.training.restaurant.view;
 
-import com.tma.training.restaurant.dto.MenuDto;
+import com.tma.training.restaurant.dtos.response.MenuDto;
 
 import java.util.List;
 import java.util.Scanner;

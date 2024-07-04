@@ -1,13 +1,10 @@
 package com.tma.training.restaurant.apis.bill;
 
 import com.tma.training.restaurant.domain.usecases.bill.DeleteBillUseCase;
-import com.tma.training.restaurant.domain.usecases.bill.UpdateOrderItemUseCase;
-import com.tma.training.restaurant.dto.request.OrderItemDto;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
-import java.util.List;
 import java.util.UUID;
 
 @RestController

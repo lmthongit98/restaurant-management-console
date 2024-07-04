@@ -1,7 +1,7 @@
 package com.tma.training.restaurant.apis.bill;
 
 import com.tma.training.restaurant.domain.usecases.bill.UpdateOrderItemUseCase;
-import com.tma.training.restaurant.dto.request.OrderItemDto;
+import com.tma.training.restaurant.dtos.request.OrderItemDto;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;

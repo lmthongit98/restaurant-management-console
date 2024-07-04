@@ -17,9 +17,9 @@ public class DeleteOrderItemController {
 
     private final DeleteOrderItemUseCase deleteOrderItemUseCase;
 
-    @DeleteMapping("/{billId}/items/{itemId}")
-    public ResponseEntity<?> deleteOrderItem(@PathVariable UUID billId, @PathVariable UUID itemId) {
-        deleteOrderItemUseCase.deleteOrderItem(billId, itemId);
+    @DeleteMapping("/{billId}/items/{menuId}")
+    public ResponseEntity<?> deleteOrderItem(@PathVariable UUID billId, @PathVariable UUID menuId) {
+        deleteOrderItemUseCase.deleteOrderItem(billId, menuId);
         return ResponseEntity.ok("Deleted Order Items");
     }
 

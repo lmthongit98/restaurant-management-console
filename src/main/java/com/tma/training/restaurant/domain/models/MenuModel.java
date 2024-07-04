@@ -1,6 +1,6 @@
 package com.tma.training.restaurant.domain.models;
 
-import com.tma.training.restaurant.dto.request.MenuCreateDto;
+import com.tma.training.restaurant.dtos.request.MenuCreateDto;
 import lombok.Getter;
 import lombok.experimental.SuperBuilder;
 
@@ -44,5 +44,6 @@ public class MenuModel extends BaseModel {
     public void validate() {
         // entity business rules validation to protect it's invariant before saving entity to a database
     }
+
 
 }

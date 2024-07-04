@@ -1,17 +1,12 @@
 package com.tma.training.restaurant.domain.models;
 
-import com.tma.training.restaurant.dto.request.BillCreateDto;
-import com.tma.training.restaurant.dto.request.OrderItemDto;
 import lombok.Getter;
 
 import java.math.BigDecimal;
 import java.time.LocalDateTime;
 import java.util.ArrayList;
 import java.util.List;
-import java.util.Map;
 import java.util.UUID;
-import java.util.function.Function;
-import java.util.stream.Collectors;
 
 @Getter
 public class BillModel extends BaseModel {
@@ -25,35 +20,13 @@ public class BillModel extends BaseModel {
         }
     }
 
-    public static BillModel create(BillCreateDto billCreateDto) {
-        BillModel billModel = new BillModel.Builder()
-                .id(UUID.randomUUID())
-                .createdDate(LocalDateTime.now())
-                .updatedDate(LocalDateTime.now())
-                .build();
-
-        for (OrderItemDto orderItemDto : billCreateDto.getOrderItems()) {
-            billModel.orderItems.add(OrderItemModel.create(billModel.id, orderItemDto));
-        }
-        return billModel;
+    public void removeOrderItem(UUID menuId) {
+        orderItems.removeIf(item -> item.getMenu().getId().equals(menuId));
     }
 
-    public void removeOrderItem(UUID orderItemId) {
-        orderItems.removeIf(item -> item.getId().equals(orderItemId));
-    }
-
-    public void updateOrderItems(List<OrderItemDto> orderItemDtos) {
-        Map<UUID, OrderItemModel> menuIdOrderItemMap = orderItems.stream().collect(Collectors.toMap(OrderItemModel::getMenuId, Function.identity()));
-        for (OrderItemDto orderItemDto : orderItemDtos) {
-            UUID menuId = orderItemDto.getMenuId();
-            OrderItemModel orderItem = menuIdOrderItemMap.get(menuId);
-            if (orderItem == null) { // new item
-                orderItem = OrderItemModel.create(id, orderItemDto);
-                orderItems.add(orderItem);
-            } else { // existing item
-                orderItem.setQuantity(orderItemDto.getQuantity());
-            }
-        }
+    public void addOrderItem(OrderItemModel orderItem) {
+        orderItem.validate();
+        this.orderItems.add(orderItem);
     }
 
     public void validate() {

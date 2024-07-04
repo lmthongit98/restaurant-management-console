@@ -4,28 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="322aa2bd-4467-44be-8d45-4f3962139ead" name="Changes" comment="hexagonal v1">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/tma/training/restaurant/infra/csv/CsvBillRepositoryAdapter.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/tma/training/restaurant/infra/csv/CsvMenuRepositoryAdapter.java" afterDir="false" />
+    <list default="true" id="322aa2bd-4467-44be-8d45-4f3962139ead" name="Changes" comment="restructure">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/tma/training/restaurant/RestaurantConsoleApp.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/tma/training/restaurant/RestaurantConsoleApp.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/tma/training/restaurant/controller/BaseController.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/tma/training/restaurant/controller/BillController.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/tma/training/restaurant/controller/MenuController.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/tma/training/restaurant/controller/impl/BillControllerImpl.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/tma/training/restaurant/controller/impl/MenuControllerImpl.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/tma/training/restaurant/repository/BillRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/tma/training/restaurant/repository/CsvBillRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/tma/training/restaurant/repository/MenuRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/tma/training/restaurant/repository/CsvMenuRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/tma/training/restaurant/repository/OrderItemRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/tma/training/restaurant/repository/CsvOrderItemRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/tma/training/restaurant/repository/impl/BillRepositoryImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/tma/training/restaurant/repository/impl/CsvBillRepositoryImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/tma/training/restaurant/repository/impl/MenuRepositoryImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/tma/training/restaurant/repository/impl/CsvMenuRepositoryImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/tma/training/restaurant/repository/impl/OrderItemRepositoryImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/tma/training/restaurant/repository/impl/CsvOrderItemRepositoryImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/tma/training/restaurant/service/BaseService.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/tma/training/restaurant/service/BillService.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/tma/training/restaurant/service/MenuService.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/tma/training/restaurant/service/impl/BillServiceImpl.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/tma/training/restaurant/service/impl/MenuServiceImpl.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/menu.csv" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/menu.csv" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -37,6 +17,7 @@
       <list>
         <option value="Interface" />
         <option value="Class" />
+        <option value="package-info" />
       </list>
     </option>
   </component>
@@ -62,32 +43,33 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;Application.RestaurantConsoleApp.executor&quot;: &quot;Debug&quot;,
-    &quot;RequestMappingsPanelOrder0&quot;: &quot;0&quot;,
-    &quot;RequestMappingsPanelOrder1&quot;: &quot;1&quot;,
-    &quot;RequestMappingsPanelWidth0&quot;: &quot;75&quot;,
-    &quot;RequestMappingsPanelWidth1&quot;: &quot;75&quot;,
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;Spring Boot.ConsoleApplication.executor&quot;: &quot;Debug&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;hexagonal&quot;,
-    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;/Users/lminhthong/Workspace/java/my-projects/restaurant-management-console&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
-    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
-    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Application.RestaurantConsoleApp.executor": "Debug",
+    "RequestMappingsPanelOrder0": "0",
+    "RequestMappingsPanelOrder1": "1",
+    "RequestMappingsPanelWidth0": "75",
+    "RequestMappingsPanelWidth1": "75",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "Spring Boot.ConsoleApplication.executor": "Run",
+    "Spring Boot.SpringApplication.executor": "Debug",
+    "git-widget-placeholder": "hexagonal",
+    "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "/Users/lminhthong/Workspace/java/my-projects/restaurant-management-console",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "project.structure.last.edited": "Modules",
+    "project.structure.proportion": "0.15",
+    "project.structure.side.proportion": "0.2",
+    "settings.editor.selected.configurable": "preferences.pluginManager",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CreateClassDialog.RecentsKey">
       <recent name="com.tma.training.restaurant.entity" />
@@ -100,7 +82,7 @@
       <recent name="com.tma.training.restaurant.domain.usecases.bill" />
     </key>
   </component>
-  <component name="RunManager" selected="Spring Boot.ConsoleApplication">
+  <component name="RunManager" selected="Spring Boot.SpringApplication">
     <configuration name="RestaurantConsoleApp" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.tma.training.restaurant.RestaurantConsoleApp" />
       <module name="restaurant-management-console" />
@@ -114,9 +96,9 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="ConsoleApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" temporary="true" nameIsGenerated="true">
+    <configuration name="SpringApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" temporary="true" nameIsGenerated="true">
       <module name="restaurant-management-console" />
-      <option name="SPRING_BOOT_MAIN_CLASS" value="com.tma.training.restaurant.ConsoleApplication" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.tma.training.restaurant.SpringApplication" />
       <extension name="coverage">
         <pattern>
           <option name="PATTERN" value="com.tma.training.restaurant.*" />
@@ -129,7 +111,7 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Spring Boot.ConsoleApplication" />
+        <item itemvalue="Spring Boot.SpringApplication" />
         <item itemvalue="Application.RestaurantConsoleApp" />
       </list>
     </recent_temporary>
@@ -405,30 +387,6 @@
       <option name="project" value="LOCAL" />
       <updated>1688204523703</updated>
     </task>
-    <task id="LOCAL-00038" summary="hexagonal v1">
-      <option name="closed" value="true" />
-      <created>1719932036554</created>
-      <option name="number" value="00038" />
-      <option name="presentableId" value="LOCAL-00038" />
-      <option name="project" value="LOCAL" />
-      <updated>1719932036554</updated>
-    </task>
-    <task id="LOCAL-00039" summary="hexagonal v1">
-      <option name="closed" value="true" />
-      <created>1719939802234</created>
-      <option name="number" value="00039" />
-      <option name="presentableId" value="LOCAL-00039" />
-      <option name="project" value="LOCAL" />
-      <updated>1719939802234</updated>
-    </task>
-    <task id="LOCAL-00040" summary="hexagonal v1">
-      <option name="closed" value="true" />
-      <created>1719942643190</created>
-      <option name="number" value="00040" />
-      <option name="presentableId" value="LOCAL-00040" />
-      <option name="project" value="LOCAL" />
-      <updated>1719942643190</updated>
-    </task>
     <task id="LOCAL-00041" summary="hexagonal v1">
       <option name="closed" value="true" />
       <created>1719943364676</created>
@@ -453,7 +411,79 @@
       <option name="project" value="LOCAL" />
       <updated>1720015807150</updated>
     </task>
-    <option name="localTasksCounter" value="44" />
+    <task id="LOCAL-00044" summary="restructure">
+      <option name="closed" value="true" />
+      <created>1720090489155</created>
+      <option name="number" value="00044" />
+      <option name="presentableId" value="LOCAL-00044" />
+      <option name="project" value="LOCAL" />
+      <updated>1720090489155</updated>
+    </task>
+    <task id="LOCAL-00045" summary="restructure">
+      <option name="closed" value="true" />
+      <created>1720090674405</created>
+      <option name="number" value="00045" />
+      <option name="presentableId" value="LOCAL-00045" />
+      <option name="project" value="LOCAL" />
+      <updated>1720090674405</updated>
+    </task>
+    <task id="LOCAL-00046" summary="restructure">
+      <option name="closed" value="true" />
+      <created>1720108316520</created>
+      <option name="number" value="00046" />
+      <option name="presentableId" value="LOCAL-00046" />
+      <option name="project" value="LOCAL" />
+      <updated>1720108316520</updated>
+    </task>
+    <task id="LOCAL-00047" summary="restructure">
+      <option name="closed" value="true" />
+      <created>1720108850254</created>
+      <option name="number" value="00047" />
+      <option name="presentableId" value="LOCAL-00047" />
+      <option name="project" value="LOCAL" />
+      <updated>1720108850254</updated>
+    </task>
+    <task id="LOCAL-00048" summary="restructure">
+      <option name="closed" value="true" />
+      <created>1720109357803</created>
+      <option name="number" value="00048" />
+      <option name="presentableId" value="LOCAL-00048" />
+      <option name="project" value="LOCAL" />
+      <updated>1720109357803</updated>
+    </task>
+    <task id="LOCAL-00049" summary="restructure">
+      <option name="closed" value="true" />
+      <created>1720109461928</created>
+      <option name="number" value="00049" />
+      <option name="presentableId" value="LOCAL-00049" />
+      <option name="project" value="LOCAL" />
+      <updated>1720109461928</updated>
+    </task>
+    <task id="LOCAL-00050" summary="restructure">
+      <option name="closed" value="true" />
+      <created>1720110233532</created>
+      <option name="number" value="00050" />
+      <option name="presentableId" value="LOCAL-00050" />
+      <option name="project" value="LOCAL" />
+      <updated>1720110233534</updated>
+    </task>
+    <task id="LOCAL-00051" summary="restructure">
+      <option name="closed" value="true" />
+      <created>1720111190962</created>
+      <option name="number" value="00051" />
+      <option name="presentableId" value="LOCAL-00051" />
+      <option name="project" value="LOCAL" />
+      <updated>1720111190962</updated>
+    </task>
+    <task id="LOCAL-00052" summary="restructure">
+      <option name="closed" value="true" />
+      <created>1720111398934</created>
+      <option name="number" value="00052" />
+      <option name="presentableId" value="LOCAL-00052" />
+      <option name="project" value="LOCAL" />
+      <updated>1720111398935</updated>
+    </task>
+    <option name="localTasksCounter" value="53" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -488,21 +518,15 @@
     <MESSAGE value="soft delete menu" />
     <MESSAGE value="refactor" />
     <MESSAGE value="hexagonal v1" />
-    <option name="LAST_COMMIT_MESSAGE" value="hexagonal v1" />
+    <MESSAGE value="restructure" />
+    <option name="LAST_COMMIT_MESSAGE" value="restructure" />
   </component>
   <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/com/tma/training/restaurant/domain/usecases/bill/impl/DeleteOrderItemUseCaseImpl.java</url>
-          <line>19</line>
-          <properties>
-            <option name="lambda-ordinal" value="-1" />
-          </properties>
-          <option name="timeStamp" value="16" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
+    <pin-to-top-manager>
+      <pinned-members>
+        <PinnedItemInfo parentTag="com.tma.training.restaurant.infra.mysql.entities.OrderItemEntity" memberName="price" />
+      </pinned-members>
+    </pin-to-top-manager>
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/restaurant_management_console$RestaurantConsoleApp.ic" NAME="RestaurantConsoleApp Coverage Results" MODIFIED="1688153952197" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">

@@ -1,9 +1,8 @@
 package com.tma.training.restaurant.domain.usecases.bill.impl;
 
-import com.tma.training.restaurant.common.exceptions.EntityNotFoundException;
+import com.tma.training.restaurant.commons.exceptions.EntityNotFoundException;
 import com.tma.training.restaurant.domain.repositories.BillRepository;
 import com.tma.training.restaurant.domain.usecases.bill.DeleteBillUseCase;
-import com.tma.training.restaurant.infra.mysql.entities.BillEntity;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 

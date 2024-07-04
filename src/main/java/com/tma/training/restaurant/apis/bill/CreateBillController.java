@@ -1,7 +1,7 @@
 package com.tma.training.restaurant.apis.bill;
 
 import com.tma.training.restaurant.domain.usecases.bill.CreateBillUseCase;
-import com.tma.training.restaurant.dto.request.BillCreateDto;
+import com.tma.training.restaurant.dtos.request.BillCreateDto;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.PostMapping;
