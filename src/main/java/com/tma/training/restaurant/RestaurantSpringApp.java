@@ -3,10 +3,10 @@ package com.tma.training.restaurant;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class SpringApplication {
+public class RestaurantSpringApp {
 
     public static void main(String[] args) {
-        org.springframework.boot.SpringApplication.run(SpringApplication.class, args);
+        org.springframework.boot.SpringApplication.run(RestaurantSpringApp.class, args);
     }
 
 
