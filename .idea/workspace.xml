@@ -4,10 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="322aa2bd-4467-44be-8d45-4f3962139ead" name="Changes" comment="refactor">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/tma/training/restaurant/service/impl/BillServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/tma/training/restaurant/service/impl/BillServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/tma/training/restaurant/service/impl/MenuServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/tma/training/restaurant/service/impl/MenuServiceImpl.java" afterDir="false" />
+    <list default="true" id="322aa2bd-4467-44be-8d45-4f3962139ead" name="Changes" comment="update csv repo adapter">
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/tma/training/restaurant/infrastructure/persistences/csv/adapters/CsvBillRepositoryImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/tma/training/restaurant/infrastructure/persistences/csv/adapters/CsvBillRepositoryAdapter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/tma/training/restaurant/infrastructure/persistences/mysql/adapters/JpaBillRepositoryImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/tma/training/restaurant/infrastructure/persistences/mysql/adapters/JpaBillRepositoryAdapter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/tma/training/restaurant/infrastructure/persistences/mysql/repositories/BillJpaRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/tma/training/restaurant/infrastructure/persistences/mysql/repositories/JpaBillRepository.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -18,16 +18,25 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Interface" />
+        <option value="package-info" />
         <option value="Class" />
       </list>
     </option>
   </component>
   <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="master" />
+      </map>
+    </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
   </component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 8
+}</component>
   <component name="ProjectId" id="2Rq0X8aEXxZVPKzOPR6esu1JLXf" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <ConfirmationsSetting value="2" id="Add" />
@@ -36,29 +45,46 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
-    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
-    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Application.RestaurantConsoleApp.executor": "Debug",
+    "RequestMappingsPanelOrder0": "0",
+    "RequestMappingsPanelOrder1": "1",
+    "RequestMappingsPanelWidth0": "75",
+    "RequestMappingsPanelWidth1": "75",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "Spring Boot.ConsoleApplication.executor": "Run",
+    "Spring Boot.SpringApplication.executor": "Debug",
+    "git-widget-placeholder": "domain-oriented-design",
+    "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "/Users/lminhthong/Workspace/java/my-projects/restaurant-management-console",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "project.structure.last.edited": "Modules",
+    "project.structure.proportion": "0.15",
+    "project.structure.side.proportion": "0.2",
+    "settings.editor.selected.configurable": "preferences.pluginManager",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CreateClassDialog.RecentsKey">
       <recent name="com.tma.training.restaurant.entity" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
-      <recent name="com.tma.training.restaurant.service.impl" />
-      <recent name="com.tma.training.restaurant.service" />
-      <recent name="com.tma.training.restaurant.repository.impl" />
-      <recent name="com.tma.training.restaurant.common.anotations" />
+      <recent name="com.tma.training.restaurant.infrastructure.persistences.csv.mappers" />
+      <recent name="com.tma.training.restaurant.apis.bill" />
+      <recent name="com.tma.training.restaurant.apis" />
+      <recent name="com.tma.training.restaurant.infra.mysql.entities" />
+      <recent name="com.tma.training.restaurant.domain.repositories" />
     </key>
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="Spring Boot.SpringApplication">
     <configuration name="RestaurantConsoleApp" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.tma.training.restaurant.RestaurantConsoleApp" />
       <module name="restaurant-management-console" />
@@ -72,8 +98,22 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="SpringApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" temporary="true" nameIsGenerated="true">
+      <module name="restaurant-management-console" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.tma.training.restaurant.SpringApplication" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.tma.training.restaurant.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Spring Boot.SpringApplication" />
         <item itemvalue="Application.RestaurantConsoleApp" />
       </list>
     </recent_temporary>
@@ -86,6 +126,10 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1687962340865</updated>
+      <workItem from="1718514318226" duration="1067000" />
+      <workItem from="1718800763947" duration="979000" />
+      <workItem from="1719845581264" duration="50621000" />
+      <workItem from="1720149697082" duration="18047000" />
     </task>
     <task id="LOCAL-00001" summary="build structure for restaurant app">
       <created>1687966569032</created>
@@ -346,8 +390,107 @@
       <option name="project" value="LOCAL" />
       <updated>1688204523703</updated>
     </task>
-    <option name="localTasksCounter" value="38" />
+    <task id="LOCAL-00049" summary="restructure">
+      <option name="closed" value="true" />
+      <created>1720109461928</created>
+      <option name="number" value="00049" />
+      <option name="presentableId" value="LOCAL-00049" />
+      <option name="project" value="LOCAL" />
+      <updated>1720109461928</updated>
+    </task>
+    <task id="LOCAL-00050" summary="restructure">
+      <option name="closed" value="true" />
+      <created>1720110233532</created>
+      <option name="number" value="00050" />
+      <option name="presentableId" value="LOCAL-00050" />
+      <option name="project" value="LOCAL" />
+      <updated>1720110233534</updated>
+    </task>
+    <task id="LOCAL-00051" summary="restructure">
+      <option name="closed" value="true" />
+      <created>1720111190962</created>
+      <option name="number" value="00051" />
+      <option name="presentableId" value="LOCAL-00051" />
+      <option name="project" value="LOCAL" />
+      <updated>1720111190962</updated>
+    </task>
+    <task id="LOCAL-00052" summary="restructure">
+      <option name="closed" value="true" />
+      <created>1720111398934</created>
+      <option name="number" value="00052" />
+      <option name="presentableId" value="LOCAL-00052" />
+      <option name="project" value="LOCAL" />
+      <updated>1720111398935</updated>
+    </task>
+    <task id="LOCAL-00053" summary="restructure">
+      <option name="closed" value="true" />
+      <created>1720146606370</created>
+      <option name="number" value="00053" />
+      <option name="presentableId" value="LOCAL-00053" />
+      <option name="project" value="LOCAL" />
+      <updated>1720146606370</updated>
+    </task>
+    <task id="LOCAL-00054" summary="refactor update bill">
+      <option name="closed" value="true" />
+      <created>1720161899012</created>
+      <option name="number" value="00054" />
+      <option name="presentableId" value="LOCAL-00054" />
+      <option name="project" value="LOCAL" />
+      <updated>1720161899012</updated>
+    </task>
+    <task id="LOCAL-00055" summary="clean structure">
+      <option name="closed" value="true" />
+      <created>1720164534933</created>
+      <option name="number" value="00055" />
+      <option name="presentableId" value="LOCAL-00055" />
+      <option name="project" value="LOCAL" />
+      <updated>1720164534933</updated>
+    </task>
+    <task id="LOCAL-00056" summary="clean structure">
+      <option name="closed" value="true" />
+      <created>1720164633651</created>
+      <option name="number" value="00056" />
+      <option name="presentableId" value="LOCAL-00056" />
+      <option name="project" value="LOCAL" />
+      <updated>1720164633651</updated>
+    </task>
+    <task id="LOCAL-00057" summary="clean structure">
+      <option name="closed" value="true" />
+      <created>1720169497617</created>
+      <option name="number" value="00057" />
+      <option name="presentableId" value="LOCAL-00057" />
+      <option name="project" value="LOCAL" />
+      <updated>1720169497617</updated>
+    </task>
+    <task id="LOCAL-00058" summary="update csv repo adapter">
+      <option name="closed" value="true" />
+      <created>1720174520068</created>
+      <option name="number" value="00058" />
+      <option name="presentableId" value="LOCAL-00058" />
+      <option name="project" value="LOCAL" />
+      <updated>1720174520069</updated>
+    </task>
+    <task id="LOCAL-00059" summary="update csv repo adapter">
+      <option name="closed" value="true" />
+      <created>1720178373010</created>
+      <option name="number" value="00059" />
+      <option name="presentableId" value="LOCAL-00059" />
+      <option name="project" value="LOCAL" />
+      <updated>1720178373010</updated>
+    </task>
+    <task id="LOCAL-00060" summary="update csv repo adapter">
+      <option name="closed" value="true" />
+      <created>1720179834601</created>
+      <option name="number" value="00060" />
+      <option name="presentableId" value="LOCAL-00060" />
+      <option name="project" value="LOCAL" />
+      <updated>1720179834601</updated>
+    </task>
+    <option name="localTasksCounter" value="61" />
     <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
     <option name="TAB_STATES">
@@ -377,7 +520,19 @@
     <MESSAGE value="updated date and created date when save entity" />
     <MESSAGE value="soft delete menu" />
     <MESSAGE value="refactor" />
-    <option name="LAST_COMMIT_MESSAGE" value="refactor" />
+    <MESSAGE value="hexagonal v1" />
+    <MESSAGE value="restructure" />
+    <MESSAGE value="refactor update bill" />
+    <MESSAGE value="clean structure" />
+    <MESSAGE value="update csv repo adapter" />
+    <option name="LAST_COMMIT_MESSAGE" value="update csv repo adapter" />
+  </component>
+  <component name="XDebuggerManager">
+    <pin-to-top-manager>
+      <pinned-members>
+        <PinnedItemInfo parentTag="com.tma.training.restaurant.infra.mysql.entities.OrderItemEntity" memberName="price" />
+      </pinned-members>
+    </pin-to-top-manager>
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/restaurant_management_console$RestaurantConsoleApp.ic" NAME="RestaurantConsoleApp Coverage Results" MODIFIED="1688153952197" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
