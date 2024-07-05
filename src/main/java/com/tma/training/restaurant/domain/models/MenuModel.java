@@ -14,7 +14,8 @@ import java.util.UUID;
 @EqualsAndHashCode(callSuper = true)
 public class MenuModel extends BaseModel {
 
-    private MenuModel() {
+    public MenuModel(UUID id) {
+        this.id = id;
     }
 
     private String name;

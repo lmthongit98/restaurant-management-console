@@ -7,7 +7,7 @@ import com.tma.training.restaurant.infrastructure.persistences.mysql.entities.Bi
 import com.tma.training.restaurant.infrastructure.persistences.mysql.entities.OrderItemEntity;
 import com.tma.training.restaurant.infrastructure.persistences.mysql.mappers.impl.BillDataAccessMapper;
 import com.tma.training.restaurant.infrastructure.persistences.mysql.mappers.impl.OrderItemDataAccessMapper;
-import com.tma.training.restaurant.infrastructure.persistences.mysql.repositories.BillJpaRepository;
+import com.tma.training.restaurant.infrastructure.persistences.mysql.repositories.JpaBillRepository;
 import lombok.AllArgsConstructor;
 import org.springframework.stereotype.Repository;
 
@@ -17,37 +17,37 @@ import java.util.UUID;
 
 @Repository
 @AllArgsConstructor
-public class BillRepositoryImpl implements BillRepository {
+public class JpaBillRepositoryAdapter implements BillRepository {
 
-    private final BillJpaRepository billJpaRepository;
+    private final JpaBillRepository jpaBillRepository;
     private final BillDataAccessMapper billDataAccessMapper;
     private final OrderItemDataAccessMapper orderItemDataAccessMapper;
 
     @Override
     public Optional<BillModel> findById(UUID id) {
-        return billJpaRepository.findById(id).map(billDataAccessMapper::toModel);
+        return jpaBillRepository.findById(id).map(billDataAccessMapper::toModel);
     }
 
     @Override
     public void create(BillModel billModel) {
-        billJpaRepository.save(billDataAccessMapper.toEntity(billModel));
+        jpaBillRepository.save(billDataAccessMapper.toEntity(billModel));
     }
 
     @Override
     public void update(BillModel billModel) {
-        BillEntity existingEntity = billJpaRepository.findById(billModel.getId()).orElseThrow(() -> new EntityNotFoundException("Bill", billModel.getId().toString()));
+        BillEntity existingEntity = jpaBillRepository.findById(billModel.getId()).orElseThrow(() -> new EntityNotFoundException("Bill", billModel.getId().toString()));
         updateBillEntity(existingEntity, billModel);
-        billJpaRepository.save(existingEntity);
+        jpaBillRepository.save(existingEntity);
     }
 
     @Override
     public void deleteById(UUID id) {
-        billJpaRepository.deleteById(id);
+        jpaBillRepository.deleteById(id);
     }
 
     @Override
     public boolean existsById(UUID id) {
-        return billJpaRepository.existsById(id);
+        return jpaBillRepository.existsById(id);
     }
 
     private void updateBillEntity(BillEntity billEntity, BillModel billModel) {

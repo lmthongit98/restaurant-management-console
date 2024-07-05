@@ -55,6 +55,11 @@ public class SimpleCsvRepository<T extends CsvDataModel> implements CrudReposito
     }
 
     @Override
+    public void deleteById(String id) {
+        data.remove(id);
+    }
+
+    @Override
     public void deleteAll(List<T> entities) {
         for (T entity : entities) {
             delete(entity);
