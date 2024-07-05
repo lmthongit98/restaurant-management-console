@@ -4,16 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="322aa2bd-4467-44be-8d45-4f3962139ead" name="Changes" comment="restructure">
+    <list default="true" id="322aa2bd-4467-44be-8d45-4f3962139ead" name="Changes" comment="clean structure">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/tma/training/restaurant/domain/models/BaseModel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/tma/training/restaurant/domain/models/BaseModel.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/tma/training/restaurant/domain/models/MenuModel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/tma/training/restaurant/domain/models/MenuModel.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/tma/training/restaurant/domain/models/OrderItemModel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/tma/training/restaurant/domain/models/OrderItemModel.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/tma/training/restaurant/domain/usecases/bill/impl/UpdateOrderItemUseCaseImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/tma/training/restaurant/domain/usecases/bill/impl/UpdateOrderItemUseCaseImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/tma/training/restaurant/dtos/request/BillCreateDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/tma/training/restaurant/dtos/request/BillCreateDto.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/tma/training/restaurant/dtos/request/OrderItemDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/tma/training/restaurant/dtos/request/OrderItemDto.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/tma/training/restaurant/infrastructures/mysql/adapters/BillRepositoryImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/tma/training/restaurant/infrastructures/mysql/adapters/BillRepositoryImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/data.sql" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/data.sql" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -24,8 +16,8 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Interface" />
-        <option value="Class" />
         <option value="package-info" />
+        <option value="Class" />
       </list>
     </option>
   </component>
@@ -135,7 +127,7 @@
       <workItem from="1718514318226" duration="1067000" />
       <workItem from="1718800763947" duration="979000" />
       <workItem from="1719845581264" duration="50621000" />
-      <workItem from="1720149697082" duration="5255000" />
+      <workItem from="1720149697082" duration="9744000" />
     </task>
     <task id="LOCAL-00001" summary="build structure for restaurant app">
       <created>1687966569032</created>
@@ -396,30 +388,6 @@
       <option name="project" value="LOCAL" />
       <updated>1688204523703</updated>
     </task>
-    <task id="LOCAL-00042" summary="hexagonal v1">
-      <option name="closed" value="true" />
-      <created>1720010679739</created>
-      <option name="number" value="00042" />
-      <option name="presentableId" value="LOCAL-00042" />
-      <option name="project" value="LOCAL" />
-      <updated>1720010679739</updated>
-    </task>
-    <task id="LOCAL-00043" summary="hexagonal v1">
-      <option name="closed" value="true" />
-      <created>1720015807150</created>
-      <option name="number" value="00043" />
-      <option name="presentableId" value="LOCAL-00043" />
-      <option name="project" value="LOCAL" />
-      <updated>1720015807150</updated>
-    </task>
-    <task id="LOCAL-00044" summary="restructure">
-      <option name="closed" value="true" />
-      <created>1720090489155</created>
-      <option name="number" value="00044" />
-      <option name="presentableId" value="LOCAL-00044" />
-      <option name="project" value="LOCAL" />
-      <updated>1720090489155</updated>
-    </task>
     <task id="LOCAL-00045" summary="restructure">
       <option name="closed" value="true" />
       <created>1720090674405</created>
@@ -492,7 +460,31 @@
       <option name="project" value="LOCAL" />
       <updated>1720146606370</updated>
     </task>
-    <option name="localTasksCounter" value="54" />
+    <task id="LOCAL-00054" summary="refactor update bill">
+      <option name="closed" value="true" />
+      <created>1720161899012</created>
+      <option name="number" value="00054" />
+      <option name="presentableId" value="LOCAL-00054" />
+      <option name="project" value="LOCAL" />
+      <updated>1720161899012</updated>
+    </task>
+    <task id="LOCAL-00055" summary="clean structure">
+      <option name="closed" value="true" />
+      <created>1720164534933</created>
+      <option name="number" value="00055" />
+      <option name="presentableId" value="LOCAL-00055" />
+      <option name="project" value="LOCAL" />
+      <updated>1720164534933</updated>
+    </task>
+    <task id="LOCAL-00056" summary="clean structure">
+      <option name="closed" value="true" />
+      <created>1720164633651</created>
+      <option name="number" value="00056" />
+      <option name="presentableId" value="LOCAL-00056" />
+      <option name="project" value="LOCAL" />
+      <updated>1720164633651</updated>
+    </task>
+    <option name="localTasksCounter" value="57" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -528,26 +520,11 @@
     <MESSAGE value="refactor" />
     <MESSAGE value="hexagonal v1" />
     <MESSAGE value="restructure" />
-    <option name="LAST_COMMIT_MESSAGE" value="restructure" />
+    <MESSAGE value="refactor update bill" />
+    <MESSAGE value="clean structure" />
+    <option name="LAST_COMMIT_MESSAGE" value="clean structure" />
   </component>
   <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/com/tma/training/restaurant/domain/usecases/bill/impl/UpdateOrderItemUseCaseImpl.java</url>
-          <line>29</line>
-          <properties>
-            <option name="lambda-ordinal" value="-1" />
-          </properties>
-          <option name="timeStamp" value="2" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/com/tma/training/restaurant/infrastructures/mysql/adapters/BillRepositoryImpl.java</url>
-          <line>57</line>
-          <option name="timeStamp" value="3" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
     <pin-to-top-manager>
       <pinned-members>
         <PinnedItemInfo parentTag="com.tma.training.restaurant.infra.mysql.entities.OrderItemEntity" memberName="price" />

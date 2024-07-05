@@ -2,13 +2,16 @@ package com.tma.training.restaurant.commons.utils;
 
 import com.tma.training.restaurant.commons.anotations.Column;
 import com.tma.training.restaurant.commons.anotations.CsvFile;
-import com.tma.training.restaurant.infrastructures.csv.entities.CsvDataModel;
+import com.tma.training.restaurant.infrastructure.persistences.csv.entities.CsvDataModel;
+
 
 import java.io.*;
 import java.lang.reflect.Field;
 import java.lang.reflect.InvocationTargetException;
 import java.net.URL;
-import java.util.*;
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Objects;
 
 public class CsvFileUtil {
     private static final String csvDelimiter = ",";

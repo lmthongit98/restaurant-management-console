@@ -7,8 +7,8 @@ import com.tma.training.restaurant.domain.models.OrderItemModel;
 import com.tma.training.restaurant.domain.repositories.BillRepository;
 import com.tma.training.restaurant.domain.repositories.MenuRepository;
 import com.tma.training.restaurant.domain.usecases.bill.CreateBillUseCase;
-import com.tma.training.restaurant.dtos.request.BillCreateDto;
-import com.tma.training.restaurant.dtos.request.OrderItemDto;
+import com.tma.training.restaurant.application.dtos.request.BillCreateDto;
+import com.tma.training.restaurant.application.dtos.request.OrderItemDto;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 

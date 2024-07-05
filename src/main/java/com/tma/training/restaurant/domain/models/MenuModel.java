@@ -1,6 +1,6 @@
 package com.tma.training.restaurant.domain.models;
 
-import com.tma.training.restaurant.dtos.request.MenuCreateDto;
+import com.tma.training.restaurant.application.dtos.request.MenuCreateDto;
 import lombok.EqualsAndHashCode;
 import lombok.Getter;
 import lombok.experimental.SuperBuilder;

@@ -4,8 +4,8 @@ import com.tma.training.restaurant.commons.exceptions.EntityNotFoundException;
 import com.tma.training.restaurant.domain.models.BillModel;
 import com.tma.training.restaurant.domain.repositories.BillRepository;
 import com.tma.training.restaurant.domain.usecases.bill.BillReportUseCase;
-import com.tma.training.restaurant.dtos.response.BillReport;
-import com.tma.training.restaurant.dtos.response.OrderInfo;
+import com.tma.training.restaurant.application.dtos.response.BillReport;
+import com.tma.training.restaurant.application.dtos.response.OrderInfo;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 

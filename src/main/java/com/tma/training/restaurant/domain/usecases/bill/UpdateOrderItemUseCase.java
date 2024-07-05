@@ -1,6 +1,6 @@
 package com.tma.training.restaurant.domain.usecases.bill;
 
-import com.tma.training.restaurant.dtos.request.OrderItemDto;
+import com.tma.training.restaurant.application.dtos.request.OrderItemDto;
 
 import java.util.List;
 import java.util.UUID;
