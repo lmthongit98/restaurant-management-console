@@ -24,7 +24,6 @@ public class CreateBillUseCaseImpl implements CreateBillUseCase {
 
     @Override
     public void createBill(BillCreateDto billCreateDto) {
-        validateOrderItems(billCreateDto);
         BillModel billModel = new BillModel.Builder()
                 .id(UUID.randomUUID())
                 .createdDate(LocalDateTime.now())
@@ -46,14 +45,6 @@ public class CreateBillUseCaseImpl implements CreateBillUseCase {
         }
         billModel.validate();
         billRepository.create(billModel);
-    }
-
-    private void validateOrderItems(BillCreateDto billCreateDto) {
-        for (OrderItemDto orderItemDto : billCreateDto.getOrderItems()) {
-            if (!menuRepository.existsById(orderItemDto.getMenuId())) {
-                throw new EntityNotFoundException("Menu ID", orderItemDto.getMenuId().toString());
-            }
-        }
     }
 
 }
