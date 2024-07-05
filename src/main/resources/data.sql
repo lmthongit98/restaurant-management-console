@@ -12,8 +12,7 @@ CREATE TABLE IF NOT EXISTS menus (
 CREATE TABLE IF NOT EXISTS bills (
      id UUID PRIMARY KEY,
      createdDate TIMESTAMP NOT NULL,
-     updatedDate TIMESTAMP NOT NULL,
-     isPaid BOOLEAN NOT NULL
+     updatedDate TIMESTAMP NOT NULL
     );
 
 CREATE TABLE IF NOT EXISTS order_items (

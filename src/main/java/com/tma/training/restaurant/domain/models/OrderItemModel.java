@@ -1,13 +1,12 @@
 package com.tma.training.restaurant.domain.models;
 
-import com.tma.training.restaurant.infrastructures.csv.entities.Menu;
 import lombok.AllArgsConstructor;
+import lombok.EqualsAndHashCode;
 import lombok.Getter;
 import lombok.Setter;
 import lombok.experimental.SuperBuilder;
 
 import java.math.BigDecimal;
-import java.time.LocalDateTime;
 import java.util.Objects;
 import java.util.UUID;
 
@@ -15,6 +14,7 @@ import java.util.UUID;
 @Setter
 @SuperBuilder
 @AllArgsConstructor
+@EqualsAndHashCode(callSuper = true, of = {"billId", "menu"})
 public class OrderItemModel extends BaseModel {
 
     private UUID billId;

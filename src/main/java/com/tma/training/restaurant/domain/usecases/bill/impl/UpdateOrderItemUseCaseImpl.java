@@ -26,10 +26,14 @@ public class UpdateOrderItemUseCaseImpl implements UpdateOrderItemUseCase {
     private final MenuRepository menuRepository;
 
     @Override
-    public void updateOrderItems(UUID billId, List<OrderItemDto> orderItemDtoList) {
+    public void updateOrderItems(UUID billId, List<OrderItemDto> updatedOrderItems) {
         BillModel billModel = billRepository.findById(billId).orElseThrow(() -> new EntityNotFoundException("Bill", billId.toString()));
+
+        //  Remove items that are not in the updatedOrderItems
+        billModel.getOrderItems().removeIf(orderItem -> updatedOrderItems.stream().noneMatch(updatedItem -> updatedItem.getMenuId().equals(orderItem.getMenu().getId())));
+
         Map<UUID, OrderItemModel> menuIdOrderItemMap = billModel.getOrderItems().stream().collect(Collectors.toMap(orderItemModel -> orderItemModel.getMenu().getId(), Function.identity()));
-        for (OrderItemDto orderItemDto : orderItemDtoList) {
+        for (OrderItemDto orderItemDto : updatedOrderItems) {
             OrderItemModel orderItem = menuIdOrderItemMap.get(orderItemDto.getMenuId());
             if (orderItem == null) { // new item
                 MenuModel menuModel = menuRepository.findById(orderItemDto.getMenuId()).orElseThrow(() -> new EntityNotFoundException("Menu", orderItemDto.getMenuId().toString()));

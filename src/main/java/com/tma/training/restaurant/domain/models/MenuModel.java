@@ -1,6 +1,7 @@
 package com.tma.training.restaurant.domain.models;
 
 import com.tma.training.restaurant.dtos.request.MenuCreateDto;
+import lombok.EqualsAndHashCode;
 import lombok.Getter;
 import lombok.experimental.SuperBuilder;
 
@@ -10,6 +11,7 @@ import java.util.UUID;
 
 @Getter
 @SuperBuilder
+@EqualsAndHashCode(callSuper = true)
 public class MenuModel extends BaseModel {
 
     private MenuModel() {
