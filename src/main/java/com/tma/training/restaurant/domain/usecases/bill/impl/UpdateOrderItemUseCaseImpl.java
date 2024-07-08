@@ -1,5 +1,6 @@
 package com.tma.training.restaurant.domain.usecases.bill.impl;
 
+import com.tma.training.restaurant.application.dtos.request.OrderItemDto;
 import com.tma.training.restaurant.commons.exceptions.EntityNotFoundException;
 import com.tma.training.restaurant.domain.models.BillModel;
 import com.tma.training.restaurant.domain.models.MenuModel;
@@ -7,7 +8,6 @@ import com.tma.training.restaurant.domain.models.OrderItemModel;
 import com.tma.training.restaurant.domain.repositories.BillRepository;
 import com.tma.training.restaurant.domain.repositories.MenuRepository;
 import com.tma.training.restaurant.domain.usecases.bill.UpdateOrderItemUseCase;
-import com.tma.training.restaurant.application.dtos.request.OrderItemDto;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 
@@ -28,6 +28,7 @@ public class UpdateOrderItemUseCaseImpl implements UpdateOrderItemUseCase {
     @Override
     public void updateOrderItems(UUID billId, List<OrderItemDto> updatedOrderItems) {
         BillModel billModel = billRepository.findById(billId).orElseThrow(() -> new EntityNotFoundException("Bill", billId.toString()));
+        billModel.setUpdatedDate(LocalDateTime.now());
 
         //  Remove items that are not in the updatedOrderItems
         billModel.getOrderItems().removeIf(orderItem -> updatedOrderItems.stream().noneMatch(updatedItem -> updatedItem.getMenuId().equals(orderItem.getMenu().getId())));
@@ -49,8 +50,10 @@ public class UpdateOrderItemUseCaseImpl implements UpdateOrderItemUseCase {
                 billModel.addOrderItem(orderItem);
             } else { // existing item
                 orderItem.setQuantity(orderItemDto.getQuantity());
+                orderItem.setUpdatedDate(LocalDateTime.now());
             }
         }
+        billModel.validate();
         billRepository.update(billModel);
     }
 

@@ -4,7 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="322aa2bd-4467-44be-8d45-4f3962139ead" name="Changes" comment="remove validate" />
+    <list default="true" id="322aa2bd-4467-44be-8d45-4f3962139ead" name="Changes" comment="rename spring main app">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/tma/training/restaurant/domain/usecases/bill/impl/UpdateOrderItemUseCaseImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/tma/training/restaurant/domain/usecases/bill/impl/UpdateOrderItemUseCaseImpl.java" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -41,33 +44,34 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "Application.RestaurantConsoleApp.executor": "Debug",
-    "RequestMappingsPanelOrder0": "0",
-    "RequestMappingsPanelOrder1": "1",
-    "RequestMappingsPanelWidth0": "75",
-    "RequestMappingsPanelWidth1": "75",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "Spring Boot.ConsoleApplication.executor": "Run",
-    "Spring Boot.SpringApplication.executor": "Debug",
-    "git-widget-placeholder": "master",
-    "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "/Users/lminhthong/Workspace/java/my-projects/restaurant-management-console",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "project.structure.last.edited": "Modules",
-    "project.structure.proportion": "0.15",
-    "project.structure.side.proportion": "0.2",
-    "settings.editor.selected.configurable": "preferences.pluginManager",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Application.RestaurantConsoleApp.executor&quot;: &quot;Debug&quot;,
+    &quot;RequestMappingsPanelOrder0&quot;: &quot;0&quot;,
+    &quot;RequestMappingsPanelOrder1&quot;: &quot;1&quot;,
+    &quot;RequestMappingsPanelWidth0&quot;: &quot;75&quot;,
+    &quot;RequestMappingsPanelWidth1&quot;: &quot;75&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;Spring Boot.ConsoleApplication.executor&quot;: &quot;Run&quot;,
+    &quot;Spring Boot.RestaurantSpringApplication.executor&quot;: &quot;Debug&quot;,
+    &quot;Spring Boot.SpringApplication.executor&quot;: &quot;Debug&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/Users/lminhthong/Workspace/java/my-projects/restaurant-management-console&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CreateClassDialog.RecentsKey">
       <recent name="com.tma.training.restaurant.entity" />
@@ -80,7 +84,7 @@
       <recent name="com.tma.training.restaurant.domain.repositories" />
     </key>
   </component>
-  <component name="RunManager" selected="Spring Boot.RestaurantSpringApplication">
+  <component name="RunManager" selected="Application.RestaurantConsoleApp">
     <configuration name="RestaurantConsoleApp" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.tma.training.restaurant.RestaurantConsoleApp" />
       <module name="restaurant-management-console" />
@@ -109,7 +113,6 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Spring Boot.RestaurantSpringApplication" />
         <item itemvalue="Application.RestaurantConsoleApp" />
       </list>
     </recent_temporary>
@@ -126,6 +129,7 @@
       <workItem from="1718800763947" duration="979000" />
       <workItem from="1719845581264" duration="50621000" />
       <workItem from="1720149697082" duration="18047000" />
+      <workItem from="1720415823387" duration="2674000" />
     </task>
     <task id="LOCAL-00001" summary="build structure for restaurant app">
       <created>1687966569032</created>
@@ -386,14 +390,6 @@
       <option name="project" value="LOCAL" />
       <updated>1688204523703</updated>
     </task>
-    <task id="LOCAL-00050" summary="restructure">
-      <option name="closed" value="true" />
-      <created>1720110233532</created>
-      <option name="number" value="00050" />
-      <option name="presentableId" value="LOCAL-00050" />
-      <option name="project" value="LOCAL" />
-      <updated>1720110233534</updated>
-    </task>
     <task id="LOCAL-00051" summary="restructure">
       <option name="closed" value="true" />
       <created>1720111190962</created>
@@ -482,7 +478,15 @@
       <option name="project" value="LOCAL" />
       <updated>1720180498419</updated>
     </task>
-    <option name="localTasksCounter" value="62" />
+    <task id="LOCAL-00062" summary="rename spring main app">
+      <option name="closed" value="true" />
+      <created>1720180756290</created>
+      <option name="number" value="00062" />
+      <option name="presentableId" value="LOCAL-00062" />
+      <option name="project" value="LOCAL" />
+      <updated>1720180756291</updated>
+    </task>
+    <option name="localTasksCounter" value="63" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -522,7 +526,8 @@
     <MESSAGE value="clean structure" />
     <MESSAGE value="update csv repo adapter" />
     <MESSAGE value="remove validate" />
-    <option name="LAST_COMMIT_MESSAGE" value="remove validate" />
+    <MESSAGE value="rename spring main app" />
+    <option name="LAST_COMMIT_MESSAGE" value="rename spring main app" />
   </component>
   <component name="XDebuggerManager">
     <pin-to-top-manager>
